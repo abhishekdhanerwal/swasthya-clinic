@@ -1,0 +1,31 @@
+.subHeader {
+    background-color: #F2F2F2;
+    min-height: 40px;
+    width: 100vw;
+    position: fixed;
+    top: 64px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    justify-content: center;
+}
+
+.subHeader > span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    color: #FE7701;
+}
+
+@media (max-width: 480px) {
+    .subHeader {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+    }
+
+    .subHeader > span {
+        flex-direction: column;
+    }
+}
