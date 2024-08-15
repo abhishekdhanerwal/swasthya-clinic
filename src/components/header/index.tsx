@@ -1,11 +1,16 @@
 import { useState } from 'react';
-import Button from '@mui/material/Button';
+import { Open_Sans } from 'next/font/google';
+
 import MenuIcon from '@mui/icons-material/Menu';
-import { MenuDrawer } from '@/components/shared/drawer';
+
+import NavigationButtons from '@/components/navigation-buttons'
+import NavigationDrawer from '@/components/navigation-drawer';
+
 import css from './index.module.css';
 
-export const Header = () => {
+const openSans = Open_Sans({weight: "600", subsets: ["latin"]})
 
+export const Header = () => {
     const [openSideMenu, setOpenSideMenu] = useState(false);
     const showDrawer = () => {
         setOpenSideMenu(true);
@@ -17,17 +22,14 @@ export const Header = () => {
  
     return (
         <header className={css.header}>
-            <span className={css.title}>Swasthya Clinic</span>
+            <span className={`${css.title} ${openSans.className}`}><span>Sonia</span> Malik</span>
             <nav className={css.navigation}>
-                <Button size="small">Specialities</Button>
-                <Button size="small">Health Checkup</Button>
-                <Button size="small">About</Button>
-                <Button size="small">Contact Us</Button>
+                <NavigationButtons />
             </nav>
             <span className={css.menuIcon}>
                 <MenuIcon onClick={showDrawer} />
             </span>
-            <MenuDrawer open={openSideMenu} onClose={onCloseDrawer} />
+            <NavigationDrawer open={openSideMenu} onClose={onCloseDrawer} />
         </header>
     )
 }

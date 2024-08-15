@@ -1,0 +1,24 @@
+.title,
+.titleNoBorder {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--secondary-color-charcoal);
+}
+
+.title::before {
+  background-color: var(--primary-color-orange);
+  height: 3px;
+  width: 27px;
+  content: " ";
+  position: absolute;
+  top: 32px;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+  .title,
+  .titleNoBorder {
+    font-size: 16px;
+  }
+}

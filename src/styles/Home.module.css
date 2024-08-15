@@ -1,13 +1,15 @@
-.main {
-
+.content {
+    /* margin-top: 64px; */
 }
 
-.content {
-    margin-top: 104px;
+.banner {
+    width: 100vw;
+    height: 400px;
+    background-color: lightgray;
 }
 
 @media (max-width: 480px) {
     .content {
-        margin-top: 64px;
+        /* margin-top: 48px; */
     }
 }

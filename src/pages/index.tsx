@@ -1,12 +1,9 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
-
-import { Header } from '@/components/header'
-import { SubHeader } from "@/components/sub-header";
 
 import styles from "@/styles/Home.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Speciality } from "@/components/speciality";
+import { Button } from "@mui/material";
+import { Testimonials } from "@/components/testimonials";
 
 export default function Home() {
   return (
@@ -17,13 +14,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <Header />
-        <SubHeader />
-        <div className={styles.content}>
-          {/* <div style={{width: '60vw', height: 500, backgroundColor: "cyan"}}>`absavdhasjd</div>
-          <div style={{width: '60vw', height: 700, backgroundColor: "yellow"}}></div> */}
+      <main>
+        <div className={styles.banner}>
+          Banner
+          <div>
+          <Button variant="outlined" size="small">Outlined</Button>
+          </div>  
         </div>
+        <Speciality />
+        <Testimonials />
     </main>
     </>
   );

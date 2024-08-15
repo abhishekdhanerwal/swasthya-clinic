@@ -1,0 +1,42 @@
+.heading {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    font-size: 12px; 
+    text-align: start; 
+    margin-top: 6px;
+}
+
+/* Responsive adjustments for tabs */
+@media (max-width: 768px) {
+
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+    .avatar {
+        width: 20px;
+        height: 20px;
+    }
+
+    .userDetails {
+        margin-left: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name {
+        font-size: 10px;
+    }
+
+    .rating {
+        font-size: 10px; 
+    }
+
+    .description {
+        margin-top: 4px;
+        font-size: 8px;
+    }
+}

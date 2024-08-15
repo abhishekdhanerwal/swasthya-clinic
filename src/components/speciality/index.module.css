@@ -1,0 +1,27 @@
+.specialityContainer {
+    background-color: #fffaf4;
+    padding-top: 40px;
+}
+
+.cardsGroup {
+    padding: 30px 240px 60px 240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .cardsGroup {
+        padding: 30px 140px 60px 140px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cardsGroup {
+      width: calc(100% - 20px);
+    }
+  }

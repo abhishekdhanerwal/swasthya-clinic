@@ -73,6 +73,12 @@
   }
 } */
 
+/* styles.css */
+:root {
+  --primary-color-orange: #fd6c02;
+  --secondary-color-charcoal: #36454F;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -93,7 +99,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-    background-color: lightgrey;
+    background-color: white;
 }
 
 /* a {

@@ -1,0 +1,23 @@
+.listContainer {
+    height: calc(100vh - 64px);
+}
+
+.navItemLabel {
+    margin-left: 16px;
+}
+
+.activeNavItem {
+    color: var(--primary-color-orange);   
+}
+
+.activeNavItem > span {
+    font-weight: 500;
+}
+
+.socialMediaContainer {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+}

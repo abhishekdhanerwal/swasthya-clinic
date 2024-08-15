@@ -1,0 +1,14 @@
+.infoHeader {
+    height: 26px;
+    background-color: #a2a6f9;
+}
+
+.infoHeader > ul {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    gap: 32px;
+    justify-content: center;
+}
