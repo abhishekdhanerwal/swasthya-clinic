@@ -45,7 +45,7 @@ export const FloatingActionBtn = () => {
                         <span className={css.data}><CallIcon style={{ color: '#0000ff' }} /></span>
                     </li>
                 </ul></Popover>
-            <Fab sx={fabStyle} color="primary" aria-label="add" onClick={handleClick}>
+            <Fab className={css.icon} sx={fabStyle} color="primary" aria-label="add" onClick={handleClick}>
                 <AddIcon />
             </Fab>
         </>

@@ -32,3 +32,14 @@
     background-color: transparent;
     box-shadow: none;
 }
+
+.icon {
+  display: none;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+  .icon {
+    display: flex;
+  }
+}

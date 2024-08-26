@@ -42,7 +42,7 @@ export const Footer = () => {
             </section>
             <section className={`${css.content}`}>
                 <div className={`${css.section} ${css.routesSection} ${roboto.className}`}>
-                    <h3 className={css.routeTitle}>Useful Links</h3>
+                    <h3 className={`${roboto.className} ${css.routeTitle}`}>Useful Links</h3>
                     <ul className={css.routeList}>
                         {links.map(item => <li key={item.name}><Link href={item.route}>{item.name}</Link></li>)}
                     </ul>
@@ -67,7 +67,7 @@ export const Footer = () => {
                     </table>
                 </div>
                 <div className={`${css.section} ${css.appointment} ${roboto.className}`}>
-                    <h3 className={`${css.title}`}>Make An Appointment</h3>
+                    <h3 className={`${roboto.className} ${css.title}`}>Make An Appointment</h3>
 
                     <div className={` ${css.location}`}>
                         <LocationOnIcon sx={{ color: ThemeColors.orange }} />
