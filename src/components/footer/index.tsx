@@ -44,7 +44,7 @@ export const Footer = () => {
                 <div className={`${css.section} ${css.routesSection} ${roboto.className}`}>
                     <h3 className={css.routeTitle}>Useful Links</h3>
                     <ul className={css.routeList}>
-                        {links.map(item => <li><Link href={item.route}>{item.name}</Link></li>)}
+                        {links.map(item => <li key={item.name}><Link href={item.route}>{item.name}</Link></li>)}
                     </ul>
                 </div>
                 <div className={`${css.section} ${css.openingHours}`}>
