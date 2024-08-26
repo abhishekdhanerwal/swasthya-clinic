@@ -30,6 +30,8 @@ const NavigationDrawer = ({open, onClose}: Props) => {
         router.push(path)
     }
 
+    const selectedPath = router.query.subPage ?? router.pathname.split("/")?.[1] ?? "";
+
   return (
     <Drawer open={open} onClose={onClose} anchor='right'>
       <Box sx={{ width: 250 }} role="presentation" onClick={onClose}>
@@ -37,8 +39,8 @@ const NavigationDrawer = ({open, onClose}: Props) => {
         {NavList.map(({name, route}) => (
           <ListItem key={route} disablePadding onClick={() => goToPage(route)}>
             <ListItemButton>
-              <LetterIcon active={router.query.subPage === route || (route === "/" && !router.query.subPage)}>{name[0].toUpperCase()}</LetterIcon>
-              <ListItemText className={`${css.navItemLabel} ${router.query.subPage === route || (route === "/" && !router.query.subPage) ? css.activeNavItem : ''}`} primary={name} />
+              <LetterIcon active={selectedPath === route || (route === "/" && !selectedPath)}>{name[0].toUpperCase()}</LetterIcon>
+              <ListItemText className={`${css.navItemLabel} ${selectedPath === route || (route === "/" && !selectedPath) ? css.activeNavItem : ''}`} primary={name} />
             </ListItemButton>
           </ListItem>
         ))}

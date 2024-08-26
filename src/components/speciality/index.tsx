@@ -1,27 +1,24 @@
-import { SectionHeading } from "../section-heading"
+
+import Image from 'next/image';
+
+import { SectionHeading } from "@/components/section-heading"
+import servicesData from "@/contents/services.json";
+
 import { SpecialityCard } from "./card"
-
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import AllInboxIcon from '@mui/icons-material/AllInbox';
-import ChildCareIcon from '@mui/icons-material/ChildCare';
-
 import css from './index.module.css';
 
-const specialityList = [
-    {label: 'Gynecological Care', icon: <FavoriteIcon sx={{ fontSize: 64, color: '#fd6c02' }} />},
-    {label: 'Gynae Surgeries', icon: <AllInboxIcon sx={{ fontSize: 64, color: '#fd6c02' }} />},
-    {label: 'Antenatal care', icon: <ChildCareIcon sx={{ fontSize: 64, color: '#fd6c02' }} />},
-    {label: 'Fertility Care', icon: <FavoriteIcon sx={{ fontSize: 64, color: '#fd6c02' }} />},
-    {label: 'Cosmatic Gynaecology', icon: <AllInboxIcon sx={{ fontSize: 64, color: '#fd6c02' }} />},
-    {label: 'Lab Investigations', icon: <ChildCareIcon sx={{ fontSize: 64, color: '#fd6c02' }} />},
-]
-
 export const Speciality = () => {
+    const specialityList = servicesData.map(item => ({
+        label: item.name,
+        icon: <Image src={`/images/${item.image}`} alt={item.imgAlt} fill objectFit="contain" />,
+        list: item.children.map(child => child.name)
+    }))
+
     return (
         <section className={css.specialityContainer}>
             <SectionHeading title="Speciality" />
             <div className={css.cardsGroup}>
-                {specialityList.map(item => <SpecialityCard icon={item.icon} label={item.label} key={item.label} />)}
+                {specialityList.map(item => <SpecialityCard icon={item.icon} label={item.label} key={item.label} list={item.list} />)}
             </div>
         </section>
     )

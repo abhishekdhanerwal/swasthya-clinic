@@ -1,0 +1,14 @@
+.heading {
+    color: var(--secondary-color-charcoal);
+    position: relative;
+    text-align: center;
+}
+
+.heading > span::before {
+    content: " ";
+    height: 1px;
+    width: 100px;
+    background-color: brown;
+    position: absolute;
+    top: 32px;
+}

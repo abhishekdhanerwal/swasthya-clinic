@@ -1,0 +1,45 @@
+.card {
+    max-width: 60vw;
+}
+
+.cardAction {
+    display: flex;
+    padding-left: 8px;
+}
+
+.image {
+    height: 140px;
+}
+
+.cardContent {
+    margin-left: 8px;
+}
+
+.btn {
+    color: var(--primary-color-orange);
+    text-transform: lowercase;
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive adjustments for tabs */
+@media (max-width: 768px) {
+
+}
+  
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+    .card {
+        max-width: 95vw;
+    }
+
+    .cardAction {
+        flex-direction: column;
+    }
+
+    .image {
+        height: 120px;
+        object-fit: contain;    
+    }
+}

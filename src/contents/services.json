@@ -1,0 +1,176 @@
+[
+    {
+        "name": "Gynecological Care",
+        "id": "gynecological-care",
+        "image": "gynecology.png",
+        "imgAlt": "a female reproductive part",
+        "description": "Gynecological care is fundamental to a woman's holistic health and quality of life. It encompasses a range of services, from routine check-ups and contraception to managing complex conditions. By prioritizing gynecological care, women can maintain reproductive health, detect issues early, and enjoy a higher quality of life.",
+        "children": [
+            {
+                "name": "Vaginal Discharge",
+                "description": "Vaginal discharge is a normal bodily fluid produced by the vagina. Composed of a mixture of cells and fluids, it plays a crucial role in maintaining vaginal health by providing lubrication, preventing infection, and removing dead cells. The characteristics of normal discharge can vary widely, ranging from clear and watery to white and thick, depending on factors such as menstrual cycle stage. However, abnormal discharge, often accompanied by unusual odor, color, consistency, itching, or pain, may indicate an underlying health issue."
+            },
+            {
+                "name": "Pelvic pain",
+                "description": "Pelvic discomfort is a common issue affecting the lower abdomen and pelvis. This discomfort can originate from various organs within the reproductive, urinary, or digestive systems, as well as from the pelvic muscles and ligaments. The nature of the pain can vary widely, from sharp and sudden to dull and persistent. Intensity can range from mild to severe, and the pain may radiate to the lower back, hips, or thighs. Certain activities, such as urination or sexual intercourse, might exacerbate the pain. While some instances of pelvic discomfort are acute and short-lived, others can become chronic, persisting for six months or longer."
+            },
+            {
+                "name": "Menstrual disorders",
+                "description": [
+                    "Painful menstruation is medically termed dysmenorrhea.",
+                    "Physical and emotional changes occurring before a menstrual period are often referred to as premenstrual syndrome.",
+                    "Heavier-than-normal menstrual bleeding is known as menorrhagia.",
+                    "Bleeding between menstrual periods is medically termed metrorrhagia.",
+                    "Absence of menstrual periods is described as amenorrhea.",
+                    "Infrequent menstrual cycles are characterized as oligomenorrhea.",
+                    "Light menstrual bleeding is often described as hypomenorrhea."
+                ]
+            },
+            {
+                "name": "PCOD",
+                "description": ""
+            },
+            {
+                "name": "Premenstrual Symptoms",
+                "description": ""
+            },
+            {
+                "name": "Menopause Symptoms",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "name": "Gynae Surgeries",
+        "id": "gynae-surgeries",
+        "image": "pelvic-exam.png",
+        "imgAlt": "doctor performing surgery",
+        "description": "Gynecologic surgeries are medical procedures performed on the female reproductive organs. These surgeries can range from minimally invasive techniques to complex operations. Common reasons for gynecologic surgery include treating conditions like endometriosis, fibroids, ovarian cysts, pelvic organ prolapse, and cancer. With advancements in surgical technology, many procedures are now performed laparoscopically, resulting in quicker recovery times and reduced scarring.",
+        "children": [
+            {
+                "name": "Fibroid removal",
+                "description": ""
+            },
+            {
+                "name": "Ovarian Cyst",
+                "description": ""
+            },
+            {
+                "name": "Endometriosis",
+                "description": "Gynae Cancer Surgeries"
+            },
+            {
+                "name": "Hysterectomy/Uterus Removal Endometriosis",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "name": "Antenatal care",
+        "id": "antenatal-care",
+        "image": "maternity.png",
+        "imgAlt": "a pregnant woman",
+        "description": "",
+        "children": [
+            {
+                "name": "High risk pregnancies",
+                "description": ""
+            },
+            {
+                "name": "Recurrent pregnancy losses",
+                "description": ""
+            },
+            {
+                "name": "Screening for Down's Syndrome",
+                "description": ""
+            },
+            {
+                "name": "Gestational Diabetes",
+                "description": ""
+            },
+            {
+                "name": "Pregnancy induced Hypertension",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "name": "Fertility Care",
+        "id": "fertility-care",
+        "image": "abortion.png",
+        "imgAlt": "a child",
+        "description": "",
+        "children": [
+            {
+                "name": "Evaluation of Infertility",
+                "description": ""
+            },
+            {
+                "name": "Hysterosalpingography (HSG)",
+                "description": ""
+            },
+            {
+                "name": "Ovulation induction",
+                "description": ""
+            },
+            {
+                "name": "Intrauterine Insemination(IUI)",
+                "description": ""
+            },
+            {
+                "name": "Invitro Fertilisation (IVF)",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "name": "Cosmatic Gynaecology",
+        "id": "cosmatic-gynaecology",
+        "image": "woman.png",
+        "imgAlt": "a healthy & fit woman",
+        "description": "",
+        "children": [
+            {
+                "name": "Female genital whitening",
+                "description": ""
+            },
+            {
+                "name": "Vaginal rejuvenation (soft and tight vagina)",
+                "description": ""
+            },
+            {
+                "name": "Hymenoplasty",
+                "description": ""
+            },
+            {
+                "name": "Vaginoplasty",
+                "description": ""
+            },
+            {
+                "name": "Labiaplasty",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "name": "Lab Investigations",
+        "id": "lab-investigations",
+        "image": "health.png",
+        "imgAlt": "a complete health checkup",
+        "description": "",
+        "children": [
+            {
+                "name": "Blood test",
+                "description": ""
+            },
+            {
+                "name": "Urine test",
+                "description": ""
+            },
+            {
+                "name": "Tissue testing",
+                "description": ""
+            }
+        ]
+    }
+]

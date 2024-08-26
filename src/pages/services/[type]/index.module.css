@@ -1,0 +1,5 @@
+.serviceDetailsContainer {
+    padding: 20px 40px 0px 40px;
+    background-color: var(--page-background-color);
+    color: var(--secondary-color-charcoal);
+}

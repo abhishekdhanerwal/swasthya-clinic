@@ -6,6 +6,8 @@ import Button, { ButtonProps } from '@mui/material/Button';
 import { ThemeColors } from '@/constants/colors';
 
 import css from './index.module.css';
+import { useAppointmentDialogState } from '@/hooks/useAppointmentDialogState';
+import { AppointmentDialog } from '../appointment-dialog';
 
 const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
     color: ThemeColors.charcoal,
@@ -14,28 +16,37 @@ const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
     },
 }));
 
+const AppointmentButton = styled(Button)<ButtonProps>(({ theme }) => ({
+    color: '#fff',
+    backgroundColor: ThemeColors.orange,
+    '&:hover': {
+        backgroundColor: ThemeColors.orange
+    },
+}));
+
 export const NavList = [
-    {name: 'Home', route: '/'},
-    {name: 'About Us', route: 'about'},
-    {name: 'Services', route: 'services'},
-    {name: 'Patient Testimonials', route: 'reviews'},
-    {name: 'Procedure', route: 'procedure'},
-    {name: 'Our Gallery', route: 'gallery'},
-    {name: 'Health Camps', route: 'health-camps'},
-    {name: 'Contact Us', route: 'contact-us'},
+    { name: 'Home', route: '/' },
+    { name: 'About', route: 'about' },
+    { name: 'Services', route: 'services' },
+    { name: 'Patient Testimonials', route: 'reviews' },
 ] as const;
 
 export type RouteOptions = typeof NavList[number]['route'];
 
 const NavigationButtons = () => {
     const router = useRouter();
+    const { openDialog, handleDialogOpen, handleDialogClose } = useAppointmentDialogState();
 
     const goToPage = (path: RouteOptions) => {
-        router.push(path)
+        router.push(`/${path}`)
     }
 
+    const selectedPath = router.query.subPage ?? router.pathname.split("/")?.[1] ?? "";
+
     return (<>
-        {NavList.map(item => <ColorButton key={item.route} className={router.query.subPage === item.route ? css.activeNav :  (item.route === "/" && !router.query.subPage) ? css.activeNav : ''} onClick={() => goToPage(item.route)} size="small">{item.name}</ColorButton>)}
+        {NavList.map(item => <ColorButton key={item.route} className={selectedPath === item.route ? css.activeNav : (item.route === "/" && !selectedPath) ? css.activeNav : ''} onClick={() => goToPage(item.route)} size="small">{item.name}</ColorButton>)}
+        <AppointmentButton variant="contained" onClick={handleDialogOpen}>Book Appointment</AppointmentButton>
+        <AppointmentDialog open={openDialog} handleClose={handleDialogClose} />
     </>)
 }
 

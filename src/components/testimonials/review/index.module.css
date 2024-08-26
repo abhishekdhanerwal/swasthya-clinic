@@ -3,6 +3,12 @@
     align-items: center;
 }
 
+.userDetails {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
 .description {
     font-size: 12px; 
     text-align: start; 
@@ -23,8 +29,6 @@
 
     .userDetails {
         margin-left: 8px;
-        display: flex;
-        flex-direction: column;
     }
 
     .name {

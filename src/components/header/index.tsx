@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Open_Sans } from 'next/font/google';
 
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -7,11 +6,14 @@ import NavigationButtons from '@/components/navigation-buttons'
 import NavigationDrawer from '@/components/navigation-drawer';
 
 import css from './index.module.css';
+import { useFonts } from '@/hooks/useFonts';
+import { Button } from '@mui/material';
 
-const openSans = Open_Sans({weight: "600", subsets: ["latin"]})
 
 export const Header = () => {
     const [openSideMenu, setOpenSideMenu] = useState(false);
+
+    const { openSans } = useFonts();
     const showDrawer = () => {
         setOpenSideMenu(true);
     };

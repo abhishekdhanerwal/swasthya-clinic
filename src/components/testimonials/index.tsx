@@ -1,17 +1,16 @@
-import { Avatar, Rating } from "@mui/material"
-import { SectionHeading } from "../section-heading"
-
-import { Montserrat } from "next/font/google";
-
-import css from "./index.module.css";
 import Image from "next/image";
 
-import { ArrowCard } from "../arrow-card";
-import { Review } from "./review";
+import { Rating } from "@mui/material"
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+import { ArrowCard } from "@/components/arrow-card";
+import { SectionHeading } from "@/components/section-heading"
+import { useFonts } from "@/hooks/useFonts";
+
+import { Review } from "./review";
+import css from "./index.module.css";
 
 export const Testimonials = () => {
+    const { montserrat } = useFonts();
     return (
         <section className={css.testimonials}>
             <SectionHeading title="See what our patients are saying" hideBorder />
@@ -34,7 +33,7 @@ export const Testimonials = () => {
                     <Review />
                 </ArrowCard>
                 <figure className={css.reivewImage}>
-                    <Image src="/images/review.png" alt="a girl thinking" fill objectFit="contain" />
+                    <Image src="/images/review.png" alt="a girl thinking about reviews or testimonials" fill objectFit="contain" />
                 </figure>
             </div>
         </section>

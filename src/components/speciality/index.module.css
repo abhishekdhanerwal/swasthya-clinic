@@ -4,24 +4,32 @@
 }
 
 .cardsGroup {
-    padding: 30px 240px 60px 240px;
-    display: flex;
-    flex-wrap: wrap;
+    padding: 60px 160px 60px 160px;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 60px;
 }
 
-  /* Responsive adjustments */
+  /* Responsive adjustments for tab */
   @media (max-width: 768px) {
     .cardsGroup {
         padding: 30px 140px 60px 140px;
     }
   }
   
+  /* Responsive adjustments for mobile */
   @media (max-width: 480px) {
+    .specialityContainer {
+      padding-top: 20px;
+    }
+    
     .cardsGroup {
-      width: calc(100% - 20px);
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding:0;
+      gap: 20px;
+      justify-content: normal;
+      padding: 40px 10px;
     }
   }
