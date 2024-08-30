@@ -52,6 +52,7 @@
   color: white;
   transform: rotateY(180deg);
   padding: 20px 10px;
+  display: flex;
 }
 
 .flip-card-back > ul {
@@ -60,12 +61,18 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  justify-content: space-around;
 }
 
 .imgContainer {
   width: 14vw;
   height: 120px;
   position: relative;
+}
+
+.list {
+  display: flex;
+  align-items: center;
 }
 
 /* Responsive adjustments */

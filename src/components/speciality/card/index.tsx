@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 import { useFonts } from '@/hooks/useFonts';
 
@@ -23,7 +24,7 @@ export const SpecialityCard = ({ label, icon, list, route }: Props) => {
                 </div>
                 <div className={css["flip-card-back"]} onClick={() => router.push(`services/${route}`)}>
                     <ul className={roboto.className}>
-                        {list.map(item => <li key={item}>{item}</li>)}
+                        {list.map(item => <li key={item} className={css.list}><ArrowRightIcon />{item}</li>)}
                     </ul>
                 </div>
             </div>
