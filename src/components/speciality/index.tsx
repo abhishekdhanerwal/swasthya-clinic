@@ -11,14 +11,15 @@ export const Speciality = () => {
     const specialityList = servicesData.map(item => ({
         label: item.name,
         icon: <Image src={`/images/${item.image}`} alt={item.imgAlt} fill objectFit="contain" />,
-        list: item.children.map(child => child.name)
+        list: item.children.map(child => child.name),
+        route: item.id
     }))
 
     return (
         <section className={css.specialityContainer}>
             <SectionHeading title="Speciality" />
             <div className={css.cardsGroup}>
-                {specialityList.map(item => <SpecialityCard icon={item.icon} label={item.label} key={item.label} list={item.list} />)}
+                {specialityList.map(item => <SpecialityCard icon={item.icon} route={item.route} label={item.label} key={item.label} list={item.list} />)}
             </div>
         </section>
     )

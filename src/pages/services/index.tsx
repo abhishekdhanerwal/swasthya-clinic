@@ -20,7 +20,7 @@ export type Service = {
 
 export default function Services({ servicesData }: InferGetStaticPropsType<typeof getStaticProps>) {
     return (
-        <section className={css.serviceContainer}>
+        <section>
             <PageHeading title="Services" />
             <div className={css.cardList}>
                 {servicesData.map(item => (

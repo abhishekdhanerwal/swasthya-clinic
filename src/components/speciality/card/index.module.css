@@ -84,4 +84,8 @@
   .imgContainer {
     width: 28vw;
   }
+
+  .label {
+    font-size: 16px;
+  }
 }

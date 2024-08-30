@@ -78,6 +78,7 @@
   --primary-color-orange: #f17663;
   --secondary-color-charcoal: #36454F;
   --page-background-color: #fcfcfc;
+  --light-orange: rgba(253, 108, 2, 0.04)
 }
 
 * {
@@ -100,7 +101,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-    background-color: white;
+    background-color: #fcfcfc;
 }
 
 /* a {

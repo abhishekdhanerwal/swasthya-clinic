@@ -1,0 +1,28 @@
+.ratingContainer {
+    margin-top: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px; 
+    padding: 28px 16px 0 16px;
+    background-color: #fff;
+}
+
+.ratings {
+    margin-bottom: 28px;
+}
+
+.progress {
+    background-color: #f2f2f2;
+    padding: 12px 10px;
+    border-radius: 5px;
+    margin-top: 4px;
+}
+
+.progress span:nth-child(2) {
+    float:right;
+    font-size: 14px;
+}
+
+.progress > span:first-child {
+    margin-bottom: 6px;
+    display: inline-block;
+}

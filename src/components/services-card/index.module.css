@@ -4,11 +4,12 @@
 
 .cardAction {
     display: flex;
-    padding-left: 8px;
+    padding: 8px;
 }
 
 .image {
-    height: 140px;
+    height: 160px;
+    width: 160px;
 }
 
 .cardContent {
@@ -36,6 +37,7 @@
 
     .cardAction {
         flex-direction: column;
+        padding: 4px;
     }
 
     .image {

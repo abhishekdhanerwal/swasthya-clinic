@@ -2,3 +2,15 @@
     color: var(--primary-color-orange);
     font-weight: 600;
 }
+
+.activeRoute {
+    color: var(--primary-color-orange);
+}
+
+@media (max-width: 850px) { 
+    .appointmentBtn,
+    .navBtn {
+        font-size: 10px;
+        margin-right: 8px !important;
+    }
+}

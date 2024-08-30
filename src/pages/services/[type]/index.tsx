@@ -1,27 +1,26 @@
-import { useRouter } from 'next/router';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
+import { Accordion, AccordionDetails, AccordionSummary, List, ListItem, ListItemIcon, Typography } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+
+import { useFonts } from '@/hooks/useFonts';
 import { PageHeading } from '@/components/page-heading';
 import servicesData from "@/contents/services.json";
 
 import css from './index.module.css';
-import { GetStaticPaths, GetStaticProps } from 'next';
-import { Accordion, AccordionDetails, AccordionSummary, List, ListItem, ListItemIcon, Typography } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { useFonts } from '@/hooks/useFonts';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 export default function ServiceDetails({ selectedService }: { selectedService?: typeof servicesData[number] }) {
     const { roboto } = useFonts();
 
     return (
-        <section className={css.serviceDetailsContainer}>
+        <section>
             <PageHeading title={selectedService?.name ?? ""} />
-            <div className={roboto.className}>
-                <div style={{ marginTop: 24, marginBottom: 40 }}>{selectedService?.description}</div>
-
+            <div className={`${roboto.className} ${css.serviceDetailsContainer}`}>
+                <div className={css.description}>{selectedService?.description}</div>
                 <>
                     {selectedService?.children.map(child => (
-                        <Accordion key={child.name}>
+                        <Accordion key={child.name} classes={{root: css.accordian}}>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="panel1-content"
@@ -50,12 +49,6 @@ export default function ServiceDetails({ selectedService }: { selectedService?: 
     )
 }
 
-type A = {
-    paths: {
-
-    }
-}
-
 export const getStaticPaths: GetStaticPaths = async () => {
     const arr: string[] = servicesData.map(item => item.id);
     const paths = arr.map((type) => {
@@ -68,7 +61,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<{ selectedService?: typeof servicesData[number] }> = async (context) => {
     const currentId = context.params?.type ?? "";
-    console.log(currentId);
     const selectedService = servicesData.find(item => item.id === currentId);
     return {
         props: { selectedService }

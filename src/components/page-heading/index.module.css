@@ -2,13 +2,32 @@
     color: var(--secondary-color-charcoal);
     position: relative;
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-.heading > span::before {
-    content: " ";
-    height: 1px;
-    width: 100px;
-    background-color: brown;
-    position: absolute;
-    top: 32px;
+.heading > span {
+  border-bottom: 2px solid var(--primary-color-orange);
+  padding: 0 10px 8px 10px;
+  position: relative;
 }
+
+.icon {
+  position: absolute;
+    bottom: -7px;
+    right: 47%;
+    padding: 0;
+    background: white;
+    border-radius: 25px;
+    width: 12px;
+    height: 12px;
+    color: var(--primary-color-orange);
+}
+
+  /* Responsive adjustments for mobile */
+  @media (max-width: 480px) {
+    .heading {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+  }

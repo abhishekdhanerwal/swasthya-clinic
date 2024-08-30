@@ -1,0 +1,29 @@
+.speedDial {
+    display: none;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+    .speedDial {
+        display: flex;
+        position: fixed; 
+        bottom: 16px; 
+        right: 16px;
+    }
+
+    .icon {
+        display: flex;
+    }
+
+    .btn {
+        background-color: var(--primary-color-orange);
+    }
+
+    .btn:hover {
+        background-color: var(--primary-color-orange);
+    }
+
+    .tooltip {
+        width: 290px;
+    }
+}

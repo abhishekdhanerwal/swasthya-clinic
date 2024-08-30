@@ -1,10 +1,13 @@
-import { Header } from "@/components/header";
-import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import styles from "@/styles/Home.module.css";
+
+import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import SpeedDialTooltipOpen from "@/components/speed-dial";
 import { InfoHeader } from "@/components/info-header";
-import { FloatingActionBtn } from "@/components/floating-action-btn";
+
+import styles from "@/styles/Home.module.css";
+import "@/styles/globals.css";
+
 
 export default function App({ Component, pageProps }: AppProps) {
   return (<>
@@ -13,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <div className={styles.content}>
       <Component {...pageProps} />
     </div>
-    <FloatingActionBtn />
+    <SpeedDialTooltipOpen />
     <Footer />
   </>)
 }

@@ -1,15 +1,17 @@
+import { useRouter } from 'next/router';
+
 import { useFonts } from '@/hooks/useFonts';
 
 import css from './index.module.css';
-import { useRouter } from 'next/router';
 
 interface Props {
     label: string;
-    icon: any;
+    icon: JSX.Element;
     list: string[];
+    route: string;
 }
 
-export const SpecialityCard = ({ label, icon, list }: Props) => {
+export const SpecialityCard = ({ label, icon, list, route }: Props) => {
     const { roboto } = useFonts();
     const router = useRouter();
     return (
@@ -17,9 +19,9 @@ export const SpecialityCard = ({ label, icon, list }: Props) => {
             <div className={css["flip-card-inner"]}>
                 <div className={css["flip-card-front"]}>
                     <div className={css.imgContainer}>{icon}</div>
-                    <h3 className={roboto.className}>{label}</h3>
+                    <h3 className={`${roboto.className} ${css.label}`}>{label}</h3>
                 </div>
-                <div className={css["flip-card-back"]} onClick={() => router.push('services')}>
+                <div className={css["flip-card-back"]} onClick={() => router.push(`services/${route}`)}>
                     <ul className={roboto.className}>
                         {list.map(item => <li key={item}>{item}</li>)}
                     </ul>

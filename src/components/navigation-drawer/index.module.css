@@ -1,17 +1,12 @@
-.listContainer {
-    height: calc(100vh - 64px);
-}
-
-.navItemLabel {
-    margin-left: 16px;
-}
-
 .activeNavItem {
-    color: var(--primary-color-orange);   
+    color: var(--primary-color-orange); 
 }
 
-.activeNavItem > span {
-    font-weight: 500;
+.divider {
+    margin-top: auto;
+    bottom: 60px;
+    position: absolute;
+    width: 100%;
 }
 
 .socialMediaContainer {
@@ -20,4 +15,8 @@
     justify-content: center;
     height: 60px;
     align-items: center;
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

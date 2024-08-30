@@ -7,9 +7,6 @@ import { useFonts } from "@/hooks/useFonts";
 
 import css from './index.module.css';
 
-const nameC = "Verified User";
-const descriptionC = "123456 8901234 67890 234Doctor first explained everything thoroughly and then only started the procedure. Even during the recovery period I get calls inquiring about any discomfort or any other issue.";
-
 const maxLength = {
     sm: 80,
     mid: 100,
@@ -17,15 +14,12 @@ const maxLength = {
 }
 
 interface Props {
-    name?: string;
-    description?: string;
+    name: string;
+    description: string;
+    rating: number
 }
 
-export const Review = ({ name, description }: Props) => {
-    // TODO: remove this
-    name = nameC;
-    description = descriptionC;
-
+export const Review = ({ name, description, rating }: Props) => {
     const [truncatedDescription, setTruncatedDescription] = useState(description);
 
     const { roboto, robotoBold } = useFonts();
@@ -53,10 +47,10 @@ export const Review = ({ name, description }: Props) => {
     return (
         <>
             <div className={css.heading}>
-                <Avatar className={css.avatar} alt="review user image" src="/images/review.png" />
+                <Avatar className={css.avatar} alt="review user image" />
                 <div className={css.userDetails}>
                     <h4 className={css.name} style={robotoBold.style}>{name}</h4>
-                    <Rating className={css.rating} name="read-only" value={4.6} precision={0.2} size="small" readOnly />
+                    <Rating className={css.rating} name="read-only" value={rating} size="small" readOnly />
                 </div>
             </div>
             <p className={css.description} style={roboto.style}>{truncatedDescription}</p>

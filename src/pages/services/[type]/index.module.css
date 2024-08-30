@@ -1,5 +1,26 @@
 .serviceDetailsContainer {
-    padding: 20px 40px 0px 40px;
-    background-color: var(--page-background-color);
+    padding-left: 24px; 
+    padding-right: 24px;
     color: var(--secondary-color-charcoal);
+    margin-bottom: 100px;
+}
+
+.description {
+    margin-top: 24px; 
+    margin-bottom: 40px;
+}
+
+.accordian {
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+    .serviceDetailsContainer {
+        margin-bottom: 40px;
+    }
+
+    .accordian {
+        margin-bottom: 10px;
+    }
 }
