@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 
-import { Drawer, Rating } from "@mui/material";
+import { Drawer, Rating, useMediaQuery } from "@mui/material";
 import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -29,6 +29,7 @@ interface Props {
 }
 
 export default function Reviews({ reviewsList, evaluation }: Props) {
+    const matchesSmallScreen = useMediaQuery('(max-width: 480px)');
     const { openSans } = useFonts();
     const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -46,10 +47,10 @@ export default function Reviews({ reviewsList, evaluation }: Props) {
             <div className={css.reviewContainer}>
                 <section className={css.commentsSection}>
                     <div className={css.commentsHead}>
-                        <Image className={css.imgDoctor} alt="doctor image" src="/images/doctor.png" width={70} height={70} />
-                        <Image className={css.imgReport} alt="doctor image" src="/images/medical-report.png" width={70} height={70} />
+                        <Image className={css.imgDoctor} alt="doctor image" src="/images/doctor.png" width={matchesSmallScreen ? 60 : 70} height={matchesSmallScreen ? 60 : 70} />
+                        <Image className={css.imgReport} alt="doctor image" src="/images/medical-report.png" width={matchesSmallScreen ? 60 : 70} height={matchesSmallScreen ? 60 : 70} />
                         <h1 className={`${openSans.className} ${css.commentsTitle}`}>4.65</h1>
-                        <Rating name="read-only" className={css.commentsStar} value={4.6} precision={0.2} size="large" readOnly />
+                        <Rating name="read-only" className={css.commentsStar} value={4.6} precision={0.2} size={matchesSmallScreen ? "medium" : "large"} readOnly />
                         <div className={css.commentsSubInfo}>(1,234 Reviews)</div>
                     </div>
                     {reviewsList?.map((item, i) => <ReviewCard key={i} {...item} />)}
@@ -66,7 +67,7 @@ export default function Reviews({ reviewsList, evaluation }: Props) {
                     elevation={0}
                     slotProps={{backdrop: {classes: {root: css.rootDrawer}}}}
                 >   
-                    <CloseIcon onClick={handleDrawerClose} className={css.closeIcon} />
+                    {/* <CloseIcon onClick={handleDrawerClose} className={css.closeIcon} /> */}
                     <ElementOfEvaluation isMobileView evaluation={evaluation} />
                 </Drawer>
             </div>

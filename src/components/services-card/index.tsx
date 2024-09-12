@@ -19,7 +19,7 @@ export const ServicesCard = ({ image, imgAlt, name, description, id }: Service) 
                     alt={imgAlt}
                 />
                 <CardContent className={css.cardContent}>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography className={css.cardHeading} gutterBottom variant="h5" component="div">
                         {name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">

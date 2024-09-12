@@ -27,7 +27,7 @@ export const Review = ({ name, description, rating }: Props) => {
     const getMaxTextLength = useCallback(() => {
         if (typeof window !== 'undefined') {
             if (window?.innerWidth < 480) return maxLength.sm;
-            if (window?.innerWidth < 768) return maxLength.mid;
+            if (window?.innerWidth < 821) return maxLength.mid;
         }
         return maxLength.lg;
     }, []);

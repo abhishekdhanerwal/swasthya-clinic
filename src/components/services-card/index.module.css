@@ -44,4 +44,8 @@
         height: 120px;
         object-fit: contain;    
     }
+
+    .cardHeading {
+        font-size: 18px;
+    }
 }

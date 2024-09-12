@@ -3,7 +3,7 @@
     position: relative;
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .heading > span {
@@ -28,6 +28,7 @@
   @media (max-width: 480px) {
     .heading {
         margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+        font-size: 20px;
     }
   }

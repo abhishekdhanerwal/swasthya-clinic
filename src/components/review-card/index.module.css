@@ -54,4 +54,16 @@
         padding: 12px 20px 12px 20px;
         border-radius: 5px;
     }
+
+    .userDetails {
+        font-size: 14px;
+    }
+
+    .date {
+        font-size: 10px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
 }

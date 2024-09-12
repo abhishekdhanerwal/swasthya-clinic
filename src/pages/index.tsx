@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import { Speciality } from "@/components/speciality";
 import { Testimonials } from "@/components/testimonials";
+import { KnowYourDoc } from "@/components/know-your-doc";
 
 import styles from "@/styles/Home.module.css";
 
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
       <main>
         <div className={styles.banner}>Banner</div>
+        <KnowYourDoc />
         <Speciality />
         <Testimonials />
       </main>
