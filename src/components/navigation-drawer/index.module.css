@@ -1,4 +1,19 @@
+.drawer {
+    background-color: #F5F5F5;
+}
+
+
+
 .activeNavItem {
+    color: var(--primary-color-orange); 
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background: white;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.activeNavItemIcon {
     color: var(--primary-color-orange); 
 }
 

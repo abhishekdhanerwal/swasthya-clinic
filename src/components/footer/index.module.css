@@ -1,8 +1,6 @@
 .footerContainer {
   width: 100vw;
-  border-top: 1px solid #dfdfdf;
   background: #515151;
-  /* background: #000 linear-gradient(153deg, rgba(119, 122, 129, 0.5) 0px, rgba(50, 51, 53, 0.5) 200vh); */
 }
 
 .content {

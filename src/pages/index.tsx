@@ -3,8 +3,7 @@ import Head from "next/head";
 import { Speciality } from "@/components/speciality";
 import { Testimonials } from "@/components/testimonials";
 import { KnowYourDoc } from "@/components/know-your-doc";
-
-import styles from "@/styles/Home.module.css";
+import { Banner } from "@/components/banner";
 
 export default function Home() {
   return (
@@ -16,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className={styles.banner}>Banner</div>
+        <Banner />
         <KnowYourDoc />
         <Speciality />
         <Testimonials />

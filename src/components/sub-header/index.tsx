@@ -9,7 +9,7 @@ export const SubHeader = () => {
         <div className={css.subHeader}>
             <span>
                 <CalendarMonthIcon/>
-                Book an Appointment
+                Request An Appointment
             </span>
             <span>
                 <PersonAddAltIcon/>

@@ -1,18 +1,60 @@
+.dialogRoot {
+  width: 60vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.dialogPaper {
+  width: 40%;
+  height: 100%;
+  background: url("/images/bg/bg10.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 50%;
+  clip-path: polygon(0% 0%, 100% 0%, 60% 100%, 0% 100%);
+}
+
+.dialogText {
+    width: 50%;
+    margin-top: 60px;
+    color: var(--secondary-color-charcoal);
+}
+
+.dialogTitle {
+    text-align: center;
+    font-size: 24px;
+}
+
 .dialogContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.links {
+    margin-left: 10px;
 }
 
 .items {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 24px 0;
-    color: var(--secondary-color-charcoal);
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  color: var(--secondary-color-charcoal);
+  text-decoration: none;
 }
 
-.items:hover {
-    color: var(--primary-color-orange);
+.socialMedia {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 80px;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    gap: 12px;
 }

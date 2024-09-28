@@ -42,15 +42,15 @@ const NavigationDrawer = ({ open, onClose }: Props) => {
   const selectedPath = router.query.type ? `/${router.pathname.split('/')[1]}` : router.pathname ?? "";
 
   return (
-    <Drawer open={open} onClose={onClose} anchor='right'>
-      <Box sx={{ width: 250, mt: 2, position: 'relative', height: 'calc(100vh - 16px)' }} role="presentation" onClick={onClose}>
+    <Drawer open={open} onClose={onClose} anchor='right' classes={{paper: css.drawer}}>
+      <Box sx={{width: 275, mt: 2, position: 'relative', height: 'calc(100vh - 16px)' }} role="presentation" onClick={onClose}>
         <List
-          sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+          sx={{ width: '100%', maxWidth: 360}}
           component="nav"
           aria-labelledby="nested-list-subheader"
         >
           {navList.map(({ name, route, navIcon, child }) => (<Fragment key={route}><ListItemButton className={`${selectedPath === route ? css.activeNavItem : (route === "/" && !selectedPath) ? css.activeNavItem : ''} `} onClick={child ? handleClick : () => goToPage(route)}>
-            <ListItemIcon className={`${selectedPath === route ? css.activeNavItem : (route === "/" && !selectedPath) ? css.activeNavItem : ''} `}>
+            <ListItemIcon className={`${selectedPath === route ? css.activeNavItemIcon : (route === "/" && !selectedPath) ? css.activeNavItemIcon : ''} `}>
               {navIcon}
             </ListItemIcon>
             <ListItemText primary={name} />
@@ -59,14 +59,14 @@ const NavigationDrawer = ({ open, onClose }: Props) => {
             <Collapse in={openServices} timeout="auto" unmountOnExit>
               {child?.length ? <List component="div" disablePadding>
                 <ListItemButton className={router.pathname === '/services' ? css.activeNavItem : ''} sx={{ pl: 4 }} onClick={() => goToPage(`/services`)}>
-                  <ListItemIcon sx={{minWidth: 32}} className={router.pathname === '/services' ? css.activeNavItem : ''}>
+                  <ListItemIcon sx={{minWidth: 32}} className={router.pathname === '/services' ? css.activeNavItemIcon : ''}>
                     <ArrowRightIcon />
                   </ListItemIcon>
                   <ListItemText primary={"Services List"} />
                 </ListItemButton>
                 {child?.map(childItem => (
                   <ListItemButton key={childItem.route} className={router.query.type === childItem.route ? css.activeNavItem : ''} sx={{ pl: 4 }} onClick={() => goToPage(`/services/${childItem.route}`)}>
-                    <ListItemIcon sx={{minWidth: 32}} className={router.query.type === childItem.route ? css.activeNavItem : ''}>
+                    <ListItemIcon sx={{minWidth: 32}} className={router.query.type === childItem.route ? css.activeNavItemIcon : ''}>
                       <ArrowRightIcon />
                     </ListItemIcon>
                     <ListItemText primary={childItem.label} />

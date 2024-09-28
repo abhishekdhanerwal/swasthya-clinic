@@ -16,10 +16,9 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    [theme.breakpoints.down("sm")]: {
+    ['@media (max-width: 480px)']: {
         width: '100%',
-        marginRight: 20,
-        marginLeft: 20
+        height: 50,
     }
 }));
 

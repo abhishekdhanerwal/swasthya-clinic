@@ -38,11 +38,11 @@ export const Review = ({ name, description, rating }: Props) => {
             const truncatedText = description.length > maxLength ? description.substring(0, maxLength) + "..." : description;
             setTruncatedDescription(truncatedText);
         }
-    }, []);
+    }, [description, getMaxTextLength]);
 
     useEffect(() => {
         getDescriptionLength();
-    }, []);
+    }, [getDescriptionLength]);
 
     return (
         <>
