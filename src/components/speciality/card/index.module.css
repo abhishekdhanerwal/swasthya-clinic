@@ -84,16 +84,28 @@
 
 @media (max-width: 480px) {
   .flip-card {
-    min-width: 32vw;
-    height: 120px;
+    min-width: 145px;
+    height: 140px;
+  }
+
+  .imgContainer {
+    width: 55%;
   }
 
   .label {
-    margin-top: 20px;
-    font-size: 12px;
+    margin-top: 15px;
+    font-size: 13px;
+  }
+
+  .flip-card-back {
+    padding: 10px 10px;
+  }
+
+  .flip-card-back > ul {
+    gap: 0px;
   }
 
   .list {
-    font-size: 8px;
+    font-size: 10px;
   }
 }

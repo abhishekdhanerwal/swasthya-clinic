@@ -34,6 +34,7 @@ const BootstrapButton = styled(Button)({
         fontSize: 10,
         padding: '3px 2px',
         width: 140,
+        height: 30
     }
 });
 

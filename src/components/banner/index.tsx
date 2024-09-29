@@ -22,7 +22,7 @@ export const Banner = () => {
             showArrows 
             showThumbs={false} 
             emulateTouch 
-            interval={2000} 
+            interval={10000} 
             showStatus={false}
             showIndicators={!matchesSmallScreen}
             renderArrowPrev={(clickHandler) => <span onClick={clickHandler} className={`${css.leftBtn} ${css.swipeBtn}`}><ArrowBackIosIcon /></span>}

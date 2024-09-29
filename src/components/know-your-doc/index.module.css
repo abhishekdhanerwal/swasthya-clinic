@@ -60,11 +60,16 @@
 .docInfoContainer {
   display: flex;
   margin-top: 100px;
-  margin-right: 50px;
-  margin-left: 50px;
+  margin-right: auto;
+  margin-left: auto;
   justify-content: space-around;
   align-items: center;
   gap: 40px;
+}
+
+.doctorStack {
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .paperContent {
@@ -258,5 +263,21 @@
 
   .content {
     padding: 40px;
+  }
+
+  .content h2 {
+    font-size: 16px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  .aboutPaper {
+    padding: 12px;
+    background: url("/images/bg/bg23.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }

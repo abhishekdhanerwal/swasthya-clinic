@@ -21,4 +21,8 @@
   .titleNoBorder {
     font-size: 16px;
   }
+
+  .title::before {
+    top: 22px;
+  }
 }
