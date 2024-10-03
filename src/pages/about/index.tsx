@@ -95,7 +95,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className={css.infoContainer}>
-                    {INFO_CONTENT.map(item => <Info {...item} />)}
+                    {INFO_CONTENT.map(item => <Info key={item.label} {...item} />)}
                 </div>
                 <div className={css.ratingInfoContainer}>
                         <Image
