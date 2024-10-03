@@ -1,6 +1,9 @@
 .specialityContainer {
-    background-color: #fffaf4;
     padding-top: 40px;
+    margin-right: 40px;
+    margin-left: 40px;
+    border-radius: 25px;
+    background: #ffeedb;
 }
 
 .cardsGroup {
@@ -22,6 +25,8 @@
   @media (max-width: 480px) {
     .specialityContainer {
       padding-top: 20px;
+      margin-right: 20px;
+      margin-left: 20px;
     }
     
     .cardsGroup {

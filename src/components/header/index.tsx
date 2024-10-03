@@ -8,9 +8,11 @@ import NavigationDrawer from '@/components/navigation-drawer';
 import css from './index.module.css';
 import { useFonts } from '@/hooks/useFonts';
 import { Button } from '@mui/material';
+import { useRouter } from 'next/router';
 
 
 export const Header = () => {
+    const router = useRouter();
     const [openSideMenu, setOpenSideMenu] = useState(false);
 
     const { openSans } = useFonts();
@@ -21,10 +23,12 @@ export const Header = () => {
     const onCloseDrawer = () => {
         setOpenSideMenu(false);
     };
+
+    const goToHome = () => router.push("/");
  
     return (
         <header className={css.header}>
-            <span className={`${css.title} ${openSans.className}`}><span>Sonia</span> Malik</span>
+            <span className={`${css.title} ${openSans.className}`} onClick={goToHome}><span>Sonia</span> Malik</span>
             <nav className={css.navigation}>
                 <NavigationButtons />
             </nav>

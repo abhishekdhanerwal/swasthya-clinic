@@ -1,9 +1,9 @@
 .heading {
-    color: var(--secondary-color-charcoal);
-    position: relative;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
+  color: var(--secondary-color-charcoal);
+  position: relative;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 50px;
 }
 
 .heading > span {
@@ -14,21 +14,21 @@
 
 .icon {
   position: absolute;
-    bottom: -7px;
-    right: 47%;
-    padding: 0;
-    background: white;
-    border-radius: 25px;
-    width: 12px;
-    height: 12px;
-    color: var(--primary-color-orange);
+  bottom: -7px;
+  right: 47%;
+  padding: 0;
+  background: white;
+  border-radius: 25px;
+  width: 12px;
+  height: 12px;
+  color: var(--primary-color-orange);
 }
 
-  /* Responsive adjustments for mobile */
-  @media (max-width: 480px) {
-    .heading {
-        margin-top: 20px;
-        margin-bottom: 40px;
-        font-size: 20px;
-    }
+/* Responsive adjustments for mobile */
+@media (max-width: 480px) {
+  .heading {
+    padding-top: 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
   }
+}
