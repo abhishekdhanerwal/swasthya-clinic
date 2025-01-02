@@ -1,4 +1,4 @@
 export const DATA = {
-    number: "+919911866043",
-    email: "trozan.23@gmail.com"
+    number: "+919871575300",
+    email: "drsoniamalik.obgy@gmail.com"
 }
