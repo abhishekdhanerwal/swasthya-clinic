@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GetStaticProps } from "next";
 import Image from "next/image";
+
+import { supabase } from "@/utils/supabase";
 
 import { Drawer, Rating, useMediaQuery } from "@mui/material";
 import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
@@ -14,7 +16,17 @@ import { useFonts } from "@/hooks/useFonts";
 
 import css from './index.module.css';
 
-export type Review = typeof reviewsList[number];
+export type Review = {
+    name: string;
+    date: string;
+    title?: string;
+    description: string;
+    source?: string;
+    rating: number;
+    id?: number;
+    phoneNumber?: string;
+    created_at?: string;
+};
 type ReviewList = Array<Review>;
 
 export type Evaluation = {
@@ -28,10 +40,65 @@ interface Props {
     evaluation: Array<Evaluation>;
 }
 
+function timeAgo(timestamp: string) {
+    const now = new Date().getTime();
+    const reviewDate = new Date(timestamp).getTime() + (5.5 * 60 * 60 * 1000);
+    const timeDifference = now - reviewDate;
+
+    // Constants for time calculations
+    const msPerSecond = 1000;
+    const msPerMinute = msPerSecond * 60;
+    const msPerHour = msPerMinute * 60;
+    const msPerDay = msPerHour * 24;
+    const msPerWeek = msPerDay * 7;
+    const msPerMonth = msPerDay * 30; // Approximation
+    const msPerYear = msPerDay * 365; // Approximation
+
+    // If the time difference is less than a minute, return "just now"
+    if (timeDifference < msPerMinute) {
+        return "just now";
+    }
+
+    // If the time difference is less than an hour, return the number of minutes
+    if (timeDifference < msPerHour) {
+        const minutes = Math.floor(timeDifference / msPerMinute);
+        return `${minutes} minute${minutes > 1 ? "s" : ""} ago`;
+    }
+
+    // If the time difference is less than a day, return the number of hours
+    if (timeDifference < msPerDay) {
+        const hours = Math.floor(timeDifference / msPerHour);
+        return `${hours} hour${hours > 1 ? "s" : ""} ago`;
+    }
+
+    // If the time difference is less than a week, return the number of days
+    if (timeDifference < msPerWeek) {
+        const days = Math.floor(timeDifference / msPerDay);
+        return days === 1 ? "yesterday" : `${days} days ago`;
+    }
+
+    // If the time difference is less than a month, return the number of weeks
+    if (timeDifference < msPerMonth) {
+        const weeks = Math.floor(timeDifference / msPerWeek);
+        return `${weeks} week${weeks > 1 ? "s" : ""} ago`;
+    }
+
+    // If the time difference is less than a year, return the number of months
+    if (timeDifference < msPerYear) {
+        const months = Math.floor(timeDifference / msPerMonth);
+        return `${months} month${months > 1 ? "s" : ""} ago`;
+    }
+
+    // Otherwise, return the number of years
+    const years = Math.floor(timeDifference / msPerYear);
+    return `${years} year${years > 1 ? "s" : ""} ago`;
+}
+
 export default function Reviews({ reviewsList, evaluation }: Props) {
     const matchesSmallScreen = useMediaQuery('(max-width: 480px)');
     const { openSans } = useFonts();
     const [openDrawer, setOpenDrawer] = useState(false);
+    const [reviewsFromDb, setReviewsFromDb] = useState<ReviewList>([]);
 
     const handleDrawerOpen = () => {
         setOpenDrawer(true);
@@ -40,6 +107,31 @@ export default function Reviews({ reviewsList, evaluation }: Props) {
     const handleDrawerClose = () => {
         setOpenDrawer(false);
     }
+
+    useEffect(() => {
+        async function getData() {
+            const { data, error } = await supabase
+            .from("reviews")
+            .select('*')
+            .returns<ReviewList>();
+
+            if (data?.length) {
+                data.sort((a, b) => new Date(b.created_at ?? "").getTime() - new Date(a.created_at ?? "").getTime());
+                const newData = data.map(item => {
+                    if(!item.name.length) {
+                        item.name = "Verified Patient";
+                    }
+                    if(item.created_at) {
+                        item.date = timeAgo(item.created_at);
+                    }
+                    return item;
+                });
+                
+                setReviewsFromDb(newData);
+            }
+        }
+        getData();
+    }, []);
 
     return (
         <>
@@ -53,6 +145,7 @@ export default function Reviews({ reviewsList, evaluation }: Props) {
                         <Rating name="read-only" className={css.commentsStar} value={4.6} precision={0.2} size={matchesSmallScreen ? "medium" : "large"} readOnly />
                         <div className={css.commentsSubInfo}>(1,234 Reviews)</div>
                     </div>
+                    {reviewsFromDb.map((item, index) => <ReviewCard key={index} {...item} />)}
                     {reviewsList?.map((item, i) => <ReviewCard key={i} {...item} />)}
                 </section>
                 <section className={css.ratingSection}>

@@ -1,0 +1,59 @@
+.reviewContainer {
+  color: var(--secondary-color-charcoal);
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.horizontalLine {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.formFields {
+    margin-top: 20px;
+}
+
+.textField {
+    width: 100%;
+}
+
+.btn {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    width: 200px;
+}
+
+.success {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.success svg {
+    width: 80px;
+    height: 80px;
+    color: green
+}
+
+.success label {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+    .reviewContainer {
+        width: 90vw; 
+    }
+
+    .btn {
+        margin-top: 60px;
+        width: 90vw;
+    }
+}

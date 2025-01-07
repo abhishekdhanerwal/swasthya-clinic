@@ -22,7 +22,7 @@ export const ReviewCard = ({ date, description, name, rating, source }: Review) 
                 <Rating className={css.rating} size={matchesSmallScreen ? "small" : "medium"} name="read-only" readOnly value={rating} />
             </div>
             <p className={`${css.description} ${roboto.className}}`}>{description}</p>
-            <div className={`${css.reviewSource} ${montserrat.className}`} style={{color: source === "google" ? '#4285F4' : '#272f8a'}}>
+            {source ? <div className={`${css.reviewSource} ${montserrat.className}`} style={{color: source === "google" ? '#4285F4' : '#272f8a'}}>
                 {source === "google" ? <>
                 <GoogleIcon style={{color: '#4285F4'}} />
                 Google
@@ -31,7 +31,7 @@ export const ReviewCard = ({ date, description, name, rating, source }: Review) 
                 Practo
                 </>}
                 
-            </div>
+            </div> : null}
         </div>
     )
 }
