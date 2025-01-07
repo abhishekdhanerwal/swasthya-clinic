@@ -31,7 +31,7 @@ export const Header = () => {
 
     return (
         <header className={css.header}>
-            <span className={`${css.title} ${openSans.className}`} onClick={goToHome}><span>Sonia</span> Malik</span>
+            <span className={`${css.title} ${openSans.className}`} onClick={goToHome}><span>Dr. Sonia</span> Malik</span>
             {isCustomerReviewPage ? null :
                 <>
                     <nav className={css.navigation}>
