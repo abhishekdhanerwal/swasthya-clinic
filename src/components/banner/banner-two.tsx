@@ -68,7 +68,7 @@ export const BannerTwo = () => {
         <div className={css.bannerTwoContainer}>
             <div className={css.bannerTwoImgContainer}>
                 <Image
-                    alt="gynae check image"
+                    alt="gynaecologist doctor"
                     src="/images/bg/bg3.jpg"
                     objectFit="cover"
                     className={css.bannerOneImg}

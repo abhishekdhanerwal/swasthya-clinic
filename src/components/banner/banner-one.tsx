@@ -82,7 +82,7 @@ export function BannerOne() {
         <div className={css.bannerOneContainer}>
             <div className={css.bannerOneImgContainer}>
                 <Image
-                    alt="gynae check image"
+                    alt="doctor consulting patient"
                     src="/images/bg/bg2.jpg"
                     objectFit="cover"
                     className={css.bannerOneImg}

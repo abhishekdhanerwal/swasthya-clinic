@@ -55,18 +55,18 @@ const Content = () => {
             {matchesSmallScreen ?
                 <>
                     <div className={css.bannerThreeIconsGroup}>
-                        <Avatar src="/images/gif/one.gif" />
-                        <Avatar src="/images/gif/two.gif" />
-                        <Avatar src="/images/gif/three.gif" />
-                        <Avatar src="/images/gif/four.gif" />
+                        <Avatar alt="a pregnant lady" src="/images/gif/one.gif" />
+                        <Avatar alt="a new born baby" src="/images/gif/two.gif" />
+                        <Avatar alt="a healthy family" src="/images/gif/three.gif" />
+                        <Avatar alt="stethoscope" src="/images/gif/four.gif" />
                     </div>
                     <BootstrapButton size="small" onClick={goToAboutUs}>About Us</BootstrapButton>
                 </>
                 : <Paper className={css.bannerThreeActionBar}>
-                    <Avatar src="/images/gif/one.gif" />
-                    <Avatar src="/images/gif/two.gif" />
-                    <Avatar src="/images/gif/three.gif" />
-                    <Avatar src="/images/gif/four.gif" />
+                    <Avatar alt="a pregnant lady" src="/images/gif/one.gif" />
+                    <Avatar alt="a new born baby" src="/images/gif/two.gif" />
+                    <Avatar alt="a healthy family" src="/images/gif/three.gif" />
+                    <Avatar alt="stethoscope" src="/images/gif/four.gif" />
                     <BootstrapButton size="small" onClick={goToAboutUs}>About Us</BootstrapButton>
                 </Paper>}
         </div>
@@ -80,7 +80,7 @@ export function BannerThree() {
         <div className={css.bannerThreeContainer}>
             <div className={css.bannerOneImgContainer}>
                 <Image
-                    alt="gynae check image"
+                    alt="a new born baby with mother"
                     src="/images/bg/bg11.jpg"
                     objectFit="cover"
                     className={css.bannerOneImg}

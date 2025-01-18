@@ -60,10 +60,10 @@ const Content = () => {
                 <h4>Discover the solutions to common gynecological concerns</h4>
             </div>
             <div className={css.bannerFourIcons}>
-                <BootstrapButton classes={{ endIcon: css.bannerFourEndIcon }} startIcon={<Image alt="gyanec" src="/images/icons/i1.png" width={matchesSmallScreen ? 16 : 32} height={matchesSmallScreen ? 16 : 32} />} endIcon={<ArrowForwardIosIcon />} onClick={() => goToService('gynecological-care')}>PCOD, Pelvic Pain, Menstrual disorders</BootstrapButton>
-                <BootstrapButton classes={{ endIcon: css.bannerFourEndIcon }} startIcon={<Image alt="gyanec" src="/images/icons/i3.png" width={matchesSmallScreen ? 16 : 32} height={matchesSmallScreen ? 16 : 32} />} endIcon={<ArrowForwardIosIcon />} onClick={() => goToService('antenatal-care')}>High risk pregnancies, Recurrent pregnancy losses</BootstrapButton>
-                <BootstrapButton classes={{ endIcon: css.bannerFourEndIcon }} startIcon={<Image alt="gyanec" src="/images/icons/i2.png" width={matchesSmallScreen ? 16 : 32} height={matchesSmallScreen ? 16 : 32} />} endIcon={<ArrowForwardIosIcon />} onClick={() => goToService('gynae-surgeries')}>Gynae Surgeries, Ovarian Cyst, Endometriosis</BootstrapButton>
-                <BootstrapButton classes={{ endIcon: css.bannerFourEndIcon }} startIcon={<Image alt="gyanec" src="/images/icons/i4.png" width={matchesSmallScreen ? 16 : 32} height={matchesSmallScreen ? 16 : 32} />} endIcon={<ArrowForwardIosIcon />} onClick={() => goToService('fertility-care')}>Infertility Specialist, Hysterosalpingography (HSG)</BootstrapButton>
+                <BootstrapButton classes={{ endIcon: css.bannerFourEndIcon }} startIcon={<Image alt="vagina ovary" src="/images/icons/i1.png" width={matchesSmallScreen ? 16 : 32} height={matchesSmallScreen ? 16 : 32} />} endIcon={<ArrowForwardIosIcon />} onClick={() => goToService('gynecological-care')}>PCOD, Pelvic Pain, Menstrual disorders</BootstrapButton>
+                <BootstrapButton classes={{ endIcon: css.bannerFourEndIcon }} startIcon={<Image alt="pregnant lady womb" src="/images/icons/i3.png" width={matchesSmallScreen ? 16 : 32} height={matchesSmallScreen ? 16 : 32} />} endIcon={<ArrowForwardIosIcon />} onClick={() => goToService('antenatal-care')}>High risk pregnancies, Recurrent pregnancy losses</BootstrapButton>
+                <BootstrapButton classes={{ endIcon: css.bannerFourEndIcon }} startIcon={<Image alt="a female doctor" src="/images/icons/i2.png" width={matchesSmallScreen ? 16 : 32} height={matchesSmallScreen ? 16 : 32} />} endIcon={<ArrowForwardIosIcon />} onClick={() => goToService('gynae-surgeries')}>Gynae Surgeries, Ovarian Cyst, Endometriosis</BootstrapButton>
+                <BootstrapButton classes={{ endIcon: css.bannerFourEndIcon }} startIcon={<Image alt="a healthy lady" src="/images/icons/i4.png" width={matchesSmallScreen ? 16 : 32} height={matchesSmallScreen ? 16 : 32} />} endIcon={<ArrowForwardIosIcon />} onClick={() => goToService('fertility-care')}>Infertility Specialist, Hysterosalpingography (HSG)</BootstrapButton>
             </div>
         </div>
     )
@@ -76,7 +76,7 @@ export const BannerFour = () => {
         <div className={css.bannerFourContainer}>
             <div className={css.bannerFourImgContainer}>
                 <Image
-                    alt="gynae check image"
+                    alt="doctor inspecting patient"
                     src="/images/bg/bg21.jpg"
                     objectFit="cover"
                     className={css.bannerOneImg}

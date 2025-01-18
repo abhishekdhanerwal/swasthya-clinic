@@ -19,7 +19,7 @@ export const ElementOfEvaluation = ({evaluation, isMobileView}: Props) => {
             <ReviewRatingProgress evaluation={evaluation} />
             <div className={css.images}>
                 {!isMobileView ? <Image alt="stethoscope" src={"/images/stethoscope.png"} width={230} height={300} /> : null}
-                <Image alt="stethoscope" src={"/images/report.png"} width={260} height={300} />
+                <Image alt="doctor with report" src={"/images/report.png"} width={260} height={300} />
             </div>
         </>
     )

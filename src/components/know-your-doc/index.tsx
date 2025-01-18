@@ -26,7 +26,7 @@ export const KnowYourDoc = () => {
                 <div className={css.bookPageOne}>
                     <div className={css.docImgContainer}>
                         <Image
-                            alt="know your doc"
+                            alt="know your doctor"
                             src="/images/sonia.jpg"
                             objectFit="cover"
                             fill
