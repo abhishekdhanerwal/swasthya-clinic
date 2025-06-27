@@ -6,6 +6,8 @@
   width: 60vw;
   padding-left: 30px;
   padding-right: 15px;
+  max-height: 1500px;
+  overflow-y: auto;
 }
 
 .commentsHead {
@@ -86,6 +88,8 @@
   .commentsSection {
     width: 100vw;
     padding-left: 15px;
+    max-height: none;
+    overflow-y: hidden;
   }
 
   .ratingSection {
