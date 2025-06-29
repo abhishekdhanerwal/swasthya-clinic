@@ -14,7 +14,7 @@ export const ReviewCard = ({ date, description, name, rating, source, db, img, t
     return (
         <div className={css.card}>
             <div className={css.heading}>
-                <Avatar src={img ?? ""} />
+                <Avatar src={img ? img : ""} />
                 <div className={css.userDetails}>
                     <span className={openSans.className}>{name}</span>
                     <span className={`${roboto.className} ${css.date}`}>({timeAgo ?? date})</span>

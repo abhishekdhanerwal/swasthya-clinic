@@ -1,0 +1,50 @@
+.imagesContainer {
+    width: 90vw;
+    margin: 16px auto 40px auto;
+    overflow-y: scroll;
+}
+
+.imgCont img {
+    transition: transform 0.3s ease;
+    /* Smooth animation */
+}
+
+.imgCont:hover img {
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+}
+
+.videoContainer {
+    margin: 16px auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videoContainer video {
+    width: 90vw;
+    height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.title {
+    margin-bottom: 10px;
+    color: var(--primary-color-orange);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+
+    .tabs {
+        font-size: 12px;
+        min-height: 48px;
+    }
+
+    .tabs svg {
+        font-size: 16px;
+    }
+}

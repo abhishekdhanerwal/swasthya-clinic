@@ -1,6 +1,7 @@
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
+import CollectionsIcon from '@mui/icons-material/Collections';
 import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 import ReviewsIcon from '@mui/icons-material/Reviews';
 
@@ -27,6 +28,7 @@ export const useNavItems = () => {
         { name: 'Home', route: '/', navIcon: <HomeIcon /> },
         { name: 'About', route: '/about', navIcon: <InfoIcon /> },
         { name: 'Services', route: '/services', endIcon: <ExpandCircleDownIcon />, navIcon: <MedicalServicesIcon />, child: specialityList },
+        { name: 'Gallery', route: '/gallery', navIcon: <CollectionsIcon /> },
         { name: 'Patient Testimonials', route: '/reviews', navIcon: <ReviewsIcon /> },
     ];
 
