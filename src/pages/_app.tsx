@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
 import { usePathname } from 'next/navigation';
+import { Analytics } from "@vercel/analytics/next"
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -15,6 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const isCustomerReviewPage = pathname === "/customer-review";
 
   return (<>
+    <Analytics />
     <InfoHeader />
     <Header />
     <Component {...pageProps} />
