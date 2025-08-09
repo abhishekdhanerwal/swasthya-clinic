@@ -35,3 +35,30 @@
     bottom: 0;
     width: 100%;
 }
+
+.logoTitle {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-top: 6px;
+    background-color: var(--light-orange);
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding-bottom: 6px;
+}
+
+.logo {
+    border-radius: 15px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title > span:nth-child(2) {
+    font-size: 12px;
+}

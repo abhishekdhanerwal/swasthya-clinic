@@ -32,6 +32,12 @@
     display: none;
 }
 
+.logoTitle {
+    display: flex;
+    align-items: center;    
+    cursor: pointer;
+  }
+
 @media (max-width: 480px) {
     .header {
         min-height: 48px;

@@ -41,6 +41,22 @@ const itemData = [
         title: 'Joyful Moments'
     },
     {
+        img: '/images/gallery/8.jpg',
+        title: 'Glimpses from C-Section Surgery'
+    },
+    {
+        img: '/images/gallery/9.jpg',
+        title: 'Safe delivery, expert care'
+    },
+    {
+        img: '/images/gallery/10.jpg',
+        title: 'Precise hands, healthy baby'
+    },
+    {
+        img: '/images/gallery/11.jpg',
+        title: 'Compassionate cesarean procedure'
+    },
+    {
         img: '/images/gallery/7.jpg',
         title: 'Find Us'
     }
