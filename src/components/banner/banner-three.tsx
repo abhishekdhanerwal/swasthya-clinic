@@ -50,7 +50,7 @@ const Content = () => {
                 <h1>personalized for you</h1>
             </div>
             <div className={`${css.bannerThreeHelperText} ${roboto.className}`}>
-                <h4>- by Dr. Sonia Malik</h4>
+                <h2>- by Dr. Sonia Malik</h2>
             </div>
             {matchesSmallScreen ?
                 <>
@@ -85,6 +85,8 @@ export function BannerThree() {
                     objectFit="cover"
                     className={css.bannerOneImg}
                     fill
+                    priority   // instead of lazy load
+                    fetchPriority="high"
                 />
             </div>
             {matchesSmallScreen ?
