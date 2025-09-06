@@ -52,8 +52,8 @@ const Content = () => {
             <h1>tailored to you</h1>
         </div>
         <div className={`${css.bannerTwoHelperText} ${roboto.className}`}>
-            <h4>Personalized care, just for you.</h4>
-            <h4>Gynecological health, always new.</h4>
+            <h2>Personalized care, just for you.</h2>
+            <h2>Gynecological health, always new.</h2>
         </div>
         <div className={`${css.bannerOneIconsGroup} ${roboto.className}`}>
             <div className={css.bannerOneIcon}>
@@ -87,6 +87,8 @@ export function BannerOne() {
                     objectFit="cover"
                     className={css.bannerOneImg}
                     fill
+                    priority   // instead of lazy load
+                    fetchPriority="high"
                 />
             </div>
             {matchesSmallScreen ?

@@ -22,6 +22,8 @@ export const Banner = () => {
             showArrows 
             showThumbs={false} 
             emulateTouch 
+            swipeScrollTolerance={50}
+            preventMovementUntilSwipeScrollTolerance
             interval={10000} 
             showStatus={false}
             showIndicators={!matchesSmallScreen}
