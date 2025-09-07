@@ -169,7 +169,7 @@
   }
 
   .paraFocus {
-    font-size: 15px;
+    font-size: 19px;
   }
 }
 
@@ -247,15 +247,15 @@
     margin-left: 0px;
     flex-direction: column-reverse;
     margin-top: 0px;
-    width: 80vw;
+    width: 90vw;
   }
 
   .paperTitle {
-    font-size: 12px;
+    font-size: 18px;
   }
   
   .paperCount {
-    font-size: 16px;
+    font-size: 22px;
   }
 
   .extraImgContainer {
@@ -263,15 +263,16 @@
   }
 
   .content {
-    padding: 40px;
+    padding: 40px 20px;
   }
 
   .content h2 {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .content p {
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 1.7;
   }
 
   .aboutPaper {

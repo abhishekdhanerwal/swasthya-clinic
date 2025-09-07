@@ -25,8 +25,7 @@
   @media (max-width: 480px) {
     .specialityContainer {
       padding-top: 20px;
-      margin-right: 20px;
-      margin-left: 20px;
+      margin: 60px 20px;
     }
     
     .cardsGroup {
