@@ -247,15 +247,15 @@
     margin-left: 0px;
     flex-direction: column-reverse;
     margin-top: 0px;
-    width: 80vw;
+    width: 90vw;
   }
 
   .paperTitle {
-    font-size: 12px;
+    font-size: 18px;
   }
   
   .paperCount {
-    font-size: 16px;
+    font-size: 22px;
   }
 
   .extraImgContainer {
