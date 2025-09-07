@@ -50,8 +50,8 @@ const Content = ({ handleDialogOpen } : Props) => {
                 <h1>period care</h1>
             </div>
             <div className={`${css.bannerTwoHelperText} ${roboto.className}`}>
-                <h4>Periods are part of life, embrace the flow.</h4>
-                <h4>Healthy habits, let your body grow.</h4>
+                <h2>Periods are part of life, embrace the flow.</h2>
+                <h2>Healthy habits, let your body grow.</h2>
             </div>
             <BootstrapButton variant="contained" classes={{ startIcon: css.bannerTwoBtnIcon }} startIcon={<EastIcon style={matchesSmallScreen ? {width: 14, height: 14} : {}} />} onClick={handleDialogOpen}>
                 Get Appointment
@@ -73,6 +73,8 @@ export const BannerTwo = () => {
                     objectFit="cover"
                     className={css.bannerOneImg}
                     fill
+                    priority   // instead of lazy load
+                    fetchPriority="high"
                 />
             </div>
             {matchesSmallScreen ?

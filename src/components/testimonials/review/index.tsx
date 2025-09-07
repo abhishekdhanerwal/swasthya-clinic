@@ -49,7 +49,7 @@ export const Review = ({ name, description, rating }: Props) => {
             <div className={css.heading}>
                 <Avatar className={css.avatar} alt="review user image" />
                 <div className={css.userDetails}>
-                    <h4 className={css.name} style={robotoBold.style}>{name}</h4>
+                    <h3 className={css.name} style={robotoBold.style}>{name}</h3>
                     <Rating className={css.rating} name="read-only" value={rating} size="small" readOnly />
                 </div>
             </div>

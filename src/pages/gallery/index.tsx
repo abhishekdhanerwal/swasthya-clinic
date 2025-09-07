@@ -57,6 +57,10 @@ const itemData = [
         title: 'Compassionate cesarean procedure'
     },
     {
+        img: '/images/gallery/12.jpeg',
+        title: 'Welcoming a new born'
+    },
+    {
         img: '/images/gallery/7.jpg',
         title: 'Find Us'
     }

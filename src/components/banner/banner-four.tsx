@@ -57,7 +57,7 @@ const Content = () => {
                 <h1>every stage of life</h1>
             </div>
             <div className={`${css.bannerTwoHelperText} ${roboto.className}`}>
-                <h4>Discover the solutions to common gynecological concerns</h4>
+                <h2>Discover the solutions to common gynecological concerns</h2>
             </div>
             <div className={css.bannerFourIcons}>
                 <BootstrapButton classes={{ endIcon: css.bannerFourEndIcon }} startIcon={<Image alt="vagina ovary" src="/images/icons/i1.png" width={matchesSmallScreen ? 16 : 32} height={matchesSmallScreen ? 16 : 32} />} endIcon={<ArrowForwardIosIcon />} onClick={() => goToService('gynecological-care')}>PCOD, Pelvic Pain, Menstrual disorders</BootstrapButton>
@@ -81,6 +81,8 @@ export const BannerFour = () => {
                     objectFit="cover"
                     className={css.bannerOneImg}
                     fill
+                    priority   // instead of lazy load
+                    fetchPriority="high"
                 />
             </div>
             {matchesSmallScreen ?

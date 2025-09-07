@@ -11,8 +11,8 @@ import { DATA } from '@/constants/data';
 import css from './index.module.css';
 
 const actions = [
-  { icon: <Link className={css.icon} href={`tel:${DATA.number}`}><CallIcon style={{ color: '#0000ff' }} /></Link>, name: 'Calling Hours (10:00 AM - 8:00 PM)' },
-  { icon: <Link className={css.icon} href={`https://wa.me/${DATA.number}`}><WhatsAppIcon style={{ color: '#25D366' }} /></Link>, name: 'Whatsapp Us for Appointment' },
+  { icon: <Link className={css.icon} aria-label="Call Dr. Sonia Malik" href={`tel:${DATA.number}`}><CallIcon style={{ color: '#0000ff' }} /></Link>, name: 'Calling Hours (10:00 AM - 8:00 PM)' },
+  { icon: <Link className={css.icon} aria-label="WhatsApp Dr. Sonia Malik" href={`https://wa.me/${DATA.number}`}><WhatsAppIcon style={{ color: '#25D366' }} /></Link>, name: 'Whatsapp Us for Appointment' },
 ];
 
 export default function SpeedDialTooltipOpen() {
