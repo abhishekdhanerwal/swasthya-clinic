@@ -78,7 +78,8 @@
   --primary-color-orange: #f17663;
   --secondary-color-charcoal: #36454F;
   --page-background-color: #fcfcfc;
-  --light-orange: rgba(253, 108, 2, 0.04)
+  --light-orange: rgba(253, 108, 2, 0.04);
+  --primary-color-orange-shadow: #c05e4f
 }
 
 * {

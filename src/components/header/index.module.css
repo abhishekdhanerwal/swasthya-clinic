@@ -22,6 +22,7 @@
 
 .title > span {
     color: var(--primary-color-orange);
+    -webkit-text-stroke: 1px var(--primary-color-orange-shadow);
 }
 
 .navigation > button {
