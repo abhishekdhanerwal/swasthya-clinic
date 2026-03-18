@@ -6,12 +6,20 @@
     background: #ffeedb;
 }
 
+.mobileScrollArea {
+    position: relative;
+}
+
 .cardsGroup {
     padding: 60px 160px 60px 160px;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
+}
+
+.mobileHint {
+    display: none;
 }
 
   /* Responsive adjustments for tab */
@@ -27,13 +35,54 @@
       padding-top: 20px;
       margin: 60px 20px;
     }
+
+    .mobileScrollArea::after {
+      content: "";
+      position: absolute;
+      top: 30px;
+      right: 0;
+      bottom: 16px;
+      width: 36px;
+      background: linear-gradient(to right, rgba(255, 238, 219, 0), #ffeedb 80%);
+      pointer-events: none;
+      border-radius: 0 25px 25px 0;
+    }
     
     .cardsGroup {
       flex-wrap: nowrap;
-      overflow-x: auto;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-gutter: stable;
+      scrollbar-width: thin;
+      scrollbar-color: var(--primary-color-orange) #ffdcb5;
       padding:0;
       gap: 20px;
       justify-content: normal;
-      padding: 30px 20px;
+      padding: 30px 20px 16px;
+    }
+
+    .mobileHint {
+      display: block;
+      margin: 0;
+      padding: 0 20px 18px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--secondary-color-charcoal);
+      opacity: 0.75;
+    }
+
+    .cardsGroup::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .cardsGroup::-webkit-scrollbar-track {
+      background: #ffdcb5;
+      border-radius: 999px;
+    }
+
+    .cardsGroup::-webkit-scrollbar-thumb {
+      background: var(--primary-color-orange);
+      border-radius: 999px;
     }
   }
