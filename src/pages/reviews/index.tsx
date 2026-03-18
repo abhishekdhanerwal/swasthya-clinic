@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { GetStaticProps } from "next";
 import Image from "next/image";
+import Head from "next/head";
 
 import { supabase } from "@/utils/supabase";
 
@@ -75,6 +76,13 @@ export default function Reviews({ reviewsList, evaluation }: Props) {
 
     return (
         <>
+            <Head>
+                <title>Dr. Sonia Malik Reviews | Patient Testimonials | Gynecologist in New Delhi</title>
+                <meta
+                    name="description"
+                    content="Explore patient reviews of Dr. Sonia Malik, leading gynecologist in New Delhi. Genuine testimonials on pregnancy care, normal delivery, high-risk cases, and women's health treatments."
+                />
+            </Head>
             <PageHeading title="Patient Testimonials" />
             <div className={css.reviewContainer}>
                 <section className={css.commentsSection}>

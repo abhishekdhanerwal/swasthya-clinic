@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 
 import { PageHeading } from "@/components/page-heading";
@@ -20,6 +21,14 @@ export type Service = {
 
 export default function Services({ servicesData }: InferGetStaticPropsType<typeof getStaticProps>) {
     return (
+        <>
+        <Head>
+            <title>Gynecology Services in New Delhi | Dr. Sonia Malik</title>
+            <meta
+                name="description"
+                content="Explore comprehensive gynecology services by Dr. Sonia Malik in New Delhi including pregnancy care, fertility treatments, gynecological surgeries, cosmetic gynecology, and lab investigations."
+            />
+        </Head>
         <section>
             <PageHeading title="Services" />
             <div className={css.cardList}>
@@ -28,6 +37,7 @@ export default function Services({ servicesData }: InferGetStaticPropsType<typeo
                 ))}
             </div>
         </section>
+        </>
     )
 }
 

@@ -1,11 +1,11 @@
+import Head from "next/head";
 import { PageHeading } from "@/components/page-heading";
 
 import css from './index.module.css';
 import Image from "next/image";
 import { useFonts } from "@/hooks/useFonts";
 import { styled, useMediaQuery } from "@mui/system";
-import { LinearProgress, Slider, linearProgressClasses } from "@mui/material";
-import { ReviewRatingProgress } from "@/components/review-rating-progress";
+import { LinearProgress, linearProgressClasses } from "@mui/material";
 import { ThemeColors } from "@/constants/colors";
 
 const BorderLinearProgress = styled(LinearProgress)(() => ({
@@ -63,6 +63,14 @@ const About = () => {
     const matchesSmallScreen = useMediaQuery('(max-width: 480px)');
 
     return (
+        <>
+        <Head>
+            <title>About Dr. Sonia Malik | Obstetrician & Gynecologist in New Delhi</title>
+            <meta
+                name="description"
+                content="Learn about Dr. Sonia Malik, an experienced obstetrician and gynecologist in New Delhi with expertise in pregnancy care, deliveries, gynecological procedures, cosmetic gynecology, and adolescent health."
+            />
+        </Head>
         <section className={css.aboutSection}>
             <PageHeading title="About Me" />
             <div className={css.aboutContainer}>
@@ -107,21 +115,28 @@ const About = () => {
                     <div className={css.ratingInfo}>
                         <p className={roboto.className}>These ratings represent the percentage of patients who reported feeling satisfied with the indicated aspect of their care. We are proud to offer a high level of patient satisfaction and are committed to providing the best possible care.</p>
                         <div className={css.ratingContainer}>
-                            {EVALUATION.map(item => (
-                                <div key={item.name} className={css.progress}>
-                                        <span className={roboto.className}>{item.name}</span>
-                                        <span className={roboto.className}>{item.value}%</span>
-                                        <BorderLinearProgress variant="determinate" value={item.value} />
-                                </div>
-                            ))}
+                                {EVALUATION.map(item => (
+                                    <div key={item.name} className={css.progress}>
+                                            <span className={roboto.className}>{item.name}</span>
+                                            <span className={roboto.className}>{item.value}%</span>
+                                            <BorderLinearProgress
+                                                variant="determinate"
+                                                value={item.value}
+                                                aria-label={item.name}
+                                                aria-valuetext={`${item.value}%`}
+                                            />
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                    </div>
                 </div>
                 <div className={css.description}>
                     <p className={roboto.className}>Dr. Sonia Malik is a senior obstetrician and gynecologist with over eight years of experience based in New Delhi. She completed her MBBS and MS training in high volume Govt. Hospitals like Lady Hardinge Medical College & Kalawati Hospital, Kasturba Hospital and RML Hospital. She is proficient in a wide range of diagnostic and therapeutic procedures. With a remarkable track record of over 50,000 normal deliveries and 20,000 cesarean sections, Dr. Malik is also highly experienced in other gynecological procedures. Her areas of special interest include cosmetic gynecology and adolescent health.</p>
                 </div>
             </div>
         </section>
+        </>
+
     )
 }
 

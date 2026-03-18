@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { Accordion, AccordionDetails, AccordionSummary, List, ListItem, ListItemIcon, Typography } from '@mui/material';
@@ -14,6 +15,14 @@ export default function ServiceDetails({ selectedService }: { selectedService?: 
     const { roboto } = useFonts();
 
     return (
+        <>
+         <Head>
+            <title>{selectedService?.metaTitle}</title>
+            <meta
+                name="description"
+                content={selectedService?.metaContent}
+            />
+        </Head>
         <section>
             <PageHeading title={selectedService?.name ?? ""} />
             <div className={`${roboto.className} ${css.serviceDetailsContainer}`}>
@@ -46,6 +55,7 @@ export default function ServiceDetails({ selectedService }: { selectedService?: 
                 </>
             </div>
         </section>
+        </>
     )
 }
 
