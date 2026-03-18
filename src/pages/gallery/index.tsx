@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from 'react';
 
 import Box from '@mui/material/Box';
@@ -78,6 +79,14 @@ const Gallery = () => {
   };
 
     return (
+        <>
+        <Head>
+            <title>Gallery | Dr. Sonia Malik | Photos & Videos | New Delhi</title>
+            <meta
+                name="description"
+                content="Explore the gallery of Dr. Sonia Malik featuring photos and videos from the clinic, patient care moments, treatments, and facilities in New Delhi."
+            />
+        </Head>
         <div>
             <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
                 <Tabs value={value} onChange={handleChange} centered>
@@ -113,6 +122,7 @@ const Gallery = () => {
             </div>
             }
         </div>
+        </>
     )
 }
 

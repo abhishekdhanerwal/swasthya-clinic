@@ -19,10 +19,10 @@
 @media (max-width: 480px) {
   .title,
   .titleNoBorder {
-    font-size: 16px;
+    font-size: 24px;
   }
 
   .title::before {
-    top: 22px;
+    top: 32px;
   }
 }

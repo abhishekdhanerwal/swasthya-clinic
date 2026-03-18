@@ -1,6 +1,8 @@
 [
   {
     "name": "Gynecological Care",
+    "metaTitle": "Gynecological Care in New Delhi | Dr. Sonia Malik",
+    "metaContent": "Expert gynecological care by Dr. Sonia Malik in New Delhi. Treatment for PCOD, menstrual disorders, pelvic pain, menopause, cancer screening, and women's health concerns.",
     "id": "gynecological-care",
     "image": "gynecology.png",
     "imgAlt": "a female reproductive part",
@@ -75,6 +77,8 @@
   },
   {
     "name": "Gynae Surgeries",
+    "metaTitle": "Gynae Surgeries in New Delhi | Dr. Sonia Malik",
+    "metaContent": "Advanced gynecological surgeries by Dr. Sonia Malik in New Delhi including fibroid removal, ovarian cyst treatment, hysterectomy, and minimally invasive procedures.",
     "id": "gynae-surgeries",
     "image": "pelvic-exam.png",
     "imgAlt": "doctor performing surgery",
@@ -127,6 +131,8 @@
   },
   {
     "name": "Antenatal care",
+    "metaTitle": "Pregnancy & Antenatal Care in New Delhi | Dr. Sonia Malik",
+    "metaContent": "Comprehensive antenatal and pregnancy care by Dr. Sonia Malik in New Delhi. High-risk pregnancy management, screenings, and personalized prenatal care.",
     "id": "antenatal-care",
     "image": "maternity.png",
     "imgAlt": "a pregnant woman",
@@ -165,6 +171,8 @@
   },
   {
     "name": "Fertility Care",
+    "metaTitle": "Fertility Treatment in New Delhi | Dr. Sonia Malik",
+    "metaContent": "Fertility treatments by Dr. Sonia Malik in New Delhi including IVF, IUI, ovulation induction, and infertility evaluation for couples planning pregnancy.",
     "id": "fertility-care",
     "image": "abortion.png",
     "imgAlt": "a child",
@@ -194,6 +202,8 @@
   },
   {
     "name": "Cosmetic Gynaecology",
+    "metaTitle": "Cosmetic Gynecology in New Delhi | Dr. Sonia Malik",
+    "metaContent": "Cosmetic gynecology procedures by Dr. Sonia Malik in New Delhi including labiaplasty, vaginoplasty, hymenoplasty, and vaginal rejuvenation treatments.",
     "id": "cosmetic-gynaecology",
     "image": "woman.png",
     "imgAlt": "a healthy & fit woman",
@@ -245,6 +255,8 @@
   },
   {
     "name": "Lab Investigations",
+    "metaTitle": "Lab Tests & Health Checkups in New Delhi | Dr. Sonia Malik",
+    "metaContent": "Accurate lab investigations in New Delhi by Dr. Sonia Malik including blood tests, urine tests, fertility testing, and diagnostic health checkups.",
     "id": "lab-investigations",
     "image": "health.png",
     "imgAlt": "a complete health checkup",

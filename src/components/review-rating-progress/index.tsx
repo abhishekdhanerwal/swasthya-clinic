@@ -33,7 +33,12 @@ export const ReviewRatingProgress = ({ evaluation }: Props) => {
                     <div className={css.progress}>
                         <span className={robotoBold.className}>{item.value}%</span>
                         <span className={roboto.className}>{item.label}</span>
-                        <BorderLinearProgress variant="determinate" value={item.value} />
+                        <BorderLinearProgress
+                            variant="determinate"
+                            value={item.value}
+                            aria-label={item.name}
+                            aria-valuetext={`${item.value}%`}
+                        />
                     </div>
                 </div>
             ))}

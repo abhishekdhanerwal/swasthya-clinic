@@ -55,18 +55,66 @@ const Content = () => {
             {matchesSmallScreen ?
                 <>
                     <div className={css.bannerThreeIconsGroup}>
-                        <Avatar alt="a pregnant lady" src="/images/gif/one.gif" />
-                        <Avatar alt="a new born baby" src="/images/gif/two.gif" />
-                        <Avatar alt="a healthy family" src="/images/gif/three.gif" />
-                        <Avatar alt="stethoscope" src="/images/gif/four.gif" />
+                        <Image alt="a pregnant lady"
+                            src="/images/gif/one.gif"
+                            width={0}
+                            height={0}
+                            sizes="40px"
+                            style={{ height: "40px", width: "auto" }}
+                        />
+                        <Image alt="new born baby"
+                            src="/images/gif/two.gif"
+                            width={0}
+                            height={0}
+                            sizes="40px"
+                            style={{ height: "40px", width: "auto" }}
+                        />
+                        <Image alt="a healthy family"
+                            src="/images/gif/three.gif"
+                            width={0}
+                            height={0}
+                            sizes="40px"
+                            style={{ height: "40px", width: "auto" }}
+                        />
+                        <Image alt="stethoscope"
+                            src="/images/gif/four.gif"
+                            width={0}
+                            height={0}
+                            sizes="40px"
+                            style={{ height: "40px", width: "auto" }}
+                        />
                     </div>
                     <BootstrapButton size="small" onClick={goToAboutUs}>About Us</BootstrapButton>
                 </>
                 : <Paper className={css.bannerThreeActionBar}>
-                    <Avatar alt="a pregnant lady" src="/images/gif/one.gif" />
-                    <Avatar alt="a new born baby" src="/images/gif/two.gif" />
-                    <Avatar alt="a healthy family" src="/images/gif/three.gif" />
-                    <Avatar alt="stethoscope" src="/images/gif/four.gif" />
+                    <Image alt="a pregnant lady"
+                        src="/images/gif/one.gif"
+                        width={0}
+                        height={0}
+                        sizes="40px"
+                        style={{ height: "40px", width: "auto" }}
+                    />
+                    <Image alt="new born baby"
+                        src="/images/gif/two.gif"
+                        width={0}
+                        height={0}
+                        sizes="40px"
+                        style={{ height: "40px", width: "auto" }}
+                    />
+                    <Image alt="a healthy family"
+                        src="/images/gif/three.gif"
+                        width={0}
+                        height={0}
+                        sizes="40px"
+                        style={{ height: "40px", width: "auto" }}
+                    />
+                    <Image alt="stethoscope"
+                        src="/images/gif/four.gif"
+                        width={0}
+                        height={0}
+                        sizes="40px"
+                        style={{ height: "40px", width: "auto" }}
+                    />
                     <BootstrapButton size="small" onClick={goToAboutUs}>About Us</BootstrapButton>
                 </Paper>}
         </div>
