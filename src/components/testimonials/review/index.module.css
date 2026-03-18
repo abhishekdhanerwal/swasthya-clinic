@@ -23,8 +23,8 @@
 /* Responsive adjustments for mobile devices */
 @media (max-width: 480px) {
     .avatar {
-        width: 20px;
-        height: 20px;
+        width: 24px !important;
+        height: 24px !important;
     }
 
     .userDetails {
@@ -36,7 +36,7 @@
     }
 
     .rating {
-        font-size: 10px; 
+        font-size: 10px !important; 
     }
 
     .description {

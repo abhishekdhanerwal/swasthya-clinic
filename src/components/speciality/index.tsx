@@ -18,9 +18,12 @@ export const Speciality = () => {
     return (
         <section className={css.specialityContainer}>
             <SectionHeading title="Speciality" />
-            <div className={css.cardsGroup}>
-                {specialityList.map(item => <SpecialityCard icon={item.icon} route={item.route} label={item.label} key={item.label} list={item.list} />)}
+            <div className={css.mobileScrollArea}>
+                <div className={css.cardsGroup}>
+                    {specialityList.map(item => <SpecialityCard icon={item.icon} route={item.route} label={item.label} key={item.label} list={item.list} />)}
+                </div>
             </div>
+            <p className={css.mobileHint}>Swipe to explore more specialities</p>
         </section>
     )
 }
