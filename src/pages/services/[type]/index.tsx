@@ -27,7 +27,6 @@ export default function ServiceDetails({ selectedService }: { selectedService?: 
             <PageHeading title={selectedService?.name ?? ""} />
             <div className={`${roboto.className} ${css.serviceDetailsContainer}`}>
                 <div className={css.description}>{selectedService?.description}</div>
-                <>
                     {selectedService?.children.map(child => (
                         <Accordion key={child.name} classes={{root: css.accordian}}>
                             <AccordionSummary
@@ -52,7 +51,6 @@ export default function ServiceDetails({ selectedService }: { selectedService?: 
                             </AccordionDetails>
                         </Accordion>
                     ))}
-                </>
             </div>
         </section>
         </>

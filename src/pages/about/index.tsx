@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import { PageHeading } from "@/components/page-heading";
 
 import css from './index.module.css';

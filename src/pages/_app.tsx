@@ -15,10 +15,11 @@ export default function App({ Component, pageProps }: AppProps) {
   const pathname = usePathname();
 
   const isCustomerReviewPage = pathname === "/customer-review";
+  const isProduction = process.env.NODE_ENV === "production";
 
   return (<>
-    <Analytics />
-    <SpeedInsights />
+    {isProduction ? <Analytics /> : null}
+    {isProduction ? <SpeedInsights /> : null}
     <InfoHeader />
     <Header />
     <Component {...pageProps} />
