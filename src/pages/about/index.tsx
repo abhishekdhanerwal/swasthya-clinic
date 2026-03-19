@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Script from "next/script";
 
 import { PageHeading } from "@/components/page-heading";
 
@@ -72,7 +71,6 @@ const About = () => {
                 name="description"
                 content="Learn about Dr. Sonia Malik, an experienced obstetrician and gynecologist in New Delhi with expertise in pregnancy care, deliveries, gynecological procedures, cosmetic gynecology, and adolescent health."
             />
-            <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6534244077515652" crossOrigin="anonymous"></Script>
         </Head>
         <section className={css.aboutSection}>
             <PageHeading title="About Me" />

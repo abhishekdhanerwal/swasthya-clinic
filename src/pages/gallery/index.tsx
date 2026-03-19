@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Script from "next/script";
 import { useState } from 'react';
 
 import Box from '@mui/material/Box';
@@ -87,7 +86,6 @@ const Gallery = () => {
                 name="description"
                 content="Explore the gallery of Dr. Sonia Malik featuring photos and videos from the clinic, patient care moments, treatments, and facilities in New Delhi."
             />
-            <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6534244077515652" crossOrigin="anonymous"></Script>
         </Head>
         <div>
             <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>

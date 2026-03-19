@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Script from "next/script";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 
 import { PageHeading } from "@/components/page-heading";
@@ -29,7 +28,6 @@ export default function Services({ servicesData }: InferGetStaticPropsType<typeo
                 name="description"
                 content="Explore comprehensive gynecology services by Dr. Sonia Malik in New Delhi including pregnancy care, fertility treatments, gynecological surgeries, cosmetic gynecology, and lab investigations."
             />
-            <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6534244077515652" crossOrigin="anonymous"></Script>
         </Head>
         <section>
             <PageHeading title="Services" />
