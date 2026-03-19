@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { Accordion, AccordionDetails, AccordionSummary, List, ListItem, ListItemIcon, Typography } from '@mui/material';
@@ -22,12 +23,12 @@ export default function ServiceDetails({ selectedService }: { selectedService?: 
                 name="description"
                 content={selectedService?.metaContent}
             />
+            <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6534244077515652" crossOrigin="anonymous"></Script>
         </Head>
         <section>
             <PageHeading title={selectedService?.name ?? ""} />
             <div className={`${roboto.className} ${css.serviceDetailsContainer}`}>
                 <div className={css.description}>{selectedService?.description}</div>
-                <>
                     {selectedService?.children.map(child => (
                         <Accordion key={child.name} classes={{root: css.accordian}}>
                             <AccordionSummary
@@ -52,7 +53,6 @@ export default function ServiceDetails({ selectedService }: { selectedService?: 
                             </AccordionDetails>
                         </Accordion>
                     ))}
-                </>
             </div>
         </section>
         </>
