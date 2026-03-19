@@ -58,11 +58,11 @@ const NavigationDrawer = ({ open, onClose }: Props) => {
           </div>
         </div>
         <List
-          sx={{ width: '100%', maxWidth: 360}}
+          sx={{ width: '100%', maxWidth: 360, height: 'calc(100vh - 180px)', overflowY: 'auto'}}
           component="nav"
           aria-labelledby="nested-list-subheader"
         >
-          {navList.map(({ name, route, navIcon, child }) => (<Fragment key={route}><ListItemButton className={`${selectedPath === route ? css.activeNavItem : (route === "/" && !selectedPath) ? css.activeNavItem : ''} `} onClick={child ? handleClick : () => goToPage(route)}>
+          {navList.map(({ name, route, navIcon, child }) => (<Fragment key={route}><ListItemButton className={`${selectedPath === route ? css.activeNavItem : (route === "/" && !selectedPath) ? css.activeNavItem : css.navItem} `} onClick={child ? handleClick : () => goToPage(route)}>
             <ListItemIcon className={`${selectedPath === route ? css.activeNavItemIcon : (route === "/" && !selectedPath) ? css.activeNavItemIcon : ''} `}>
               {navIcon}
             </ListItemIcon>

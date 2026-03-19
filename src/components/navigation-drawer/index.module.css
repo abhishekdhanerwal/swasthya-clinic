@@ -2,19 +2,23 @@
     background-color: #F5F5F5;
 }
 
-
+.navItem {
+    margin: 0px 8px !important;
+}
 
 .activeNavItem {
+    background: #F4DAFF !important;
+    border-radius: 15px !important;
+    margin: 0px 8px !important;
+    color: #49146B !important;
     color: var(--primary-color-orange); 
-    border-radius: 15px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    background: white;
     margin-right: 10px;
     margin-left: 10px;
 }
 
 .activeNavItemIcon {
-    color: var(--primary-color-orange); 
+    color: #49146B !important;
 }
 
 .divider {
