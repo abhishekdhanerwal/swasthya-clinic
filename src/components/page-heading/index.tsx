@@ -10,11 +10,11 @@ interface Props {
 export const PageHeading = ({ title }: Props) => {
     const { openSans } = useFonts();
     return (
-        <h2 className={`${css.heading} ${openSans.className}`}>
+        <h1 className={`${css.heading} ${openSans.className}`}>
             <span>
                 {title}
                 <PanoramaFishEyeIcon className={css.icon} />
             </span>
-        </h2>
+        </h1>
     )
 }
